@@ -51,13 +51,15 @@
           display: none;
           position: absolute; /* Positioned below the dropdown item */
           top: 100%; /* Align it below the dropdown link */
-          left: 0;
+          left: 38%;
+          transform: translateX(-50%); /* Shift it back to the left by half its width */
           background-color: #e0e0e0; /* Background color of the dropdown */
           list-style: none;
-          padding: 10px 0;
+          padding: 5px ;
           margin: 0;
           border-radius: 5px;
           z-index: 1; /* Ensure it appears above other elements */
+          
       }
 
       .dropdown-menu li {
@@ -249,3 +251,54 @@
           text-align: center;
       }
   
+    /* Media Queries for Responsiveness */
+@media (max-width: 768px) {  
+    .nav-links {
+        flex-direction: column;  
+        text-align: center;  
+        padding: 10px 0;  
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;  
+    }
+
+    .hero-section p {
+        font-size: 1rem;  
+    }
+
+    .cta {
+        padding: 10px 20px;  
+    }
+
+    .product-item img {
+        height: 300px;  
+    }
+
+    .dropdown-menu {
+        left: center; /* Align to the left for small screens */
+        transform: none; /* Remove transform for small screens */
+    }
+}
+
+@media (max-width: 480px) {  
+    .hero-section {
+        padding: 0 10px;  
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem;  
+    }
+
+    .hero-section p {
+        font-size: 0.9rem;  
+    }
+
+    .product-item img {
+        height: 250px;  
+    }
+
+    .product-item h3 {
+        font-size: 1rem;  
+    }
+}
