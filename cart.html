@@ -4,24 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Cart</title>
-    <link rel="stylesheet" href="cart.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="womenstyle.css"> <!-- Link to your cart styles -->
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="logo">Offbeat Outlet</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#categories">Categories</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="womens_dresses.html">Dresses</a></li>
+                        <li><a href="womens_tops.html">Tops</a></li>
+                        <li><a href="womens_bottoms.html">Bottoms</a></li>
+                        <li><a href="womens_ethnic.html">Ethnic</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Cart container -->
-    <div class="cart-container">
-        <h1>Your Shopping Cart</h1>
-        <div class="cart-items" id="cart-items">
-            <!-- Items will be dynamically inserted here -->
+    <section id="cart" class="cart-section">
+        <h2>Your Cart</h2>
+        <div id="cartItems" class="cart-items"></div>
+        <div class="cart-total">
+            <p>Total: <span id="totalPrice">Rs.0</span></p>
+            <p>Tax (5%): <span id="taxPrice">Rs.0</span></p>
+            <p>Grand Total: <span id="grandTotal">Rs.0</span></p>
         </div>
+    </section>
 
-        <!-- Cart total price and checkout button -->
-        <div class="cart-summary">
-            <p>Total: $<span id="cart-total">0</span></p>
-            <button id="checkout-btn">Proceed to Checkout</button>
-        </div>
-    </div>
+    <footer>
+        <p>&copy; 2024 Offbeat Outlet. All Rights Reserved.</p>
+    </footer>
 
-    <script src="cart.js"></script> <!-- Link to your JS file -->
+    <script src="cart.js"></script> <!-- Link to your cart script -->
 </body>
 </html>
