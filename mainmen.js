@@ -30,7 +30,7 @@ const kurtas = [
 ];
 
     // (T-Shirts data)
-const t-shirts = [
+const tshirts = [
    { img: 'tt1.webp', name: 'White Printed Shirt', price: 'Rs.3,000' },
                 { img: 'tt2.webp', name: 'Silk Back Shirt', price: 'Rs.3,000' },
                 { img: 'tt3.webp', name: 'Classic Plain White Shirt', price: 'Rs.1,490' },
@@ -91,8 +91,8 @@ document.addEventListener('DOMContentLoaded', () => {
         displayProducts(mens);
    }else if (path.includes('kurtas.html')) {
         displayProducts(kurtas);
-    } else if (path.includes('t-shirts.html')) {
-        displayProducts(t-shirts);
+    } else if (path.includes('tshirts.html')) {
+        displayProducts(tshirts);
     } else if (path.includes('shirts.html')) {
         displayProducts(shirts);
     }
