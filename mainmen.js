@@ -1,14 +1,7 @@
+//for product grid 
 
-//he product grid sathi ahee
-
-
-
-
-
-
-// Product data for dresses
-const kurtas = [
     // (Kurtas data)
+const kurtas = [
      { img: 'kk1.jpg', name: 'Elegant Kurta With Jacket', price: 'Rs.2,400' },
                 { img: 'kk2.jpg', name: 'Dark Blue Cotton Kurta', price: 'Rs.3,000' },
                 { img: 'kk3.jpeg', name: 'Stylish Skinny Kurta', price: 'Rs.2,690' },
@@ -23,25 +16,24 @@ const kurtas = [
                 { img: 'kk12.avif', name: 'Dark Blue Kurta', price: 'Rs.3,000' }
 ];
 
-// Product data for tops
-const t-shirts = [
     // (T-Shirts data)
-    { img: 'womens_images/womenstop1.jpg', name: 'Scoop-neck Microfibre Top', price: 'Rs. 799' },
-        { img: 'womens_images/womenstop2.png', name: 'Oversized printed T-shirt', price: 'Rs. 1,299' },
-        { img: 'womens_images/womenstop3.webp', name: 'Fine-knit polo shirt', price: 'Rs. 1,299.00' },
-        { img: 'womens_images/womenstop4.webp', name: 'Overlock-detail ribbed top', price: 'Rs. 799.00' },
-        { img: 'womens_images/womenstop5.png', name: 'Oversized T-shirt', price: 'Rs. 799.00' },
-        { img: 'womens_images/womenstop6.png', name: 'Overlock-detail smocked top', price: 'Rs. 999.00' },
-        { img: 'womens_images/womenstop7.png', name: 'Dusty purple chiffon top', price: 'Rs. 1,499.00' },
-        { img: 'womens_images/womenstop8.png', name: 'Red ribbed T-shirt', price: 'Rs. 699.00' },
-        { img: 'womens_images/womenstop9.png', name: 'Broderie anglaise blouse', price: 'Rs. 1,899.00' },
-        { img: 'womens_images/womenstop10.png', name: 'Textured-weave shirt', price: 'Rs. 1,899.00' },
-        { img: 'womens_images/womenstop11.png', name: 'Viscose-blend shirt', price: 'Rs. 1,899.00' },
-        { img: 'womens_images/womenstop12.png', name: 'Short vest top', price: 'Rs. 699.00' }
+const t-shirts = [
+   { img: 'tt1.webp', name: 'White Printed Shirt', price: 'Rs.3,000' },
+                { img: 'tt2.webp', name: 'Silk Back Shirt', price: 'Rs.3,000' },
+                { img: 'tt3.webp', name: 'Classic Plain White Shirt', price: 'Rs.1,490' },
+                { img: 'tt4.jpeg', name: 'Light Blue Denim Shirt', price: 'Rs.3,500' },
+                { img: 'tt5.webp', name: 'Dark Blue Denim Shirt', price: 'Rs.3,290' },
+                { img: 'tt6.webp', name: 'Light Green Plain Shirt', price: 'Rs.2,600' },
+                { img: 'tt7.jpeg', name: 'Dark Blue Printed Shirt', price: 'Rs.2,999' },
+                { img: 'tt8.webp', name: 'Multicolour Shirt', price: 'Rs.3,700' },
+                { img: 'tt9.jpeg', name: 'Pink Plain Shirt', price: 'Rs.1,300' },
+                { img: 'tt10.jpg', name: 'Classic Pattern Shirt', price: 'Rs.3,500' },
+                { img: 'tt11.jpeg', name: 'Green Printed Shirt', price: 'Rs.3,450' },
+                { img: 'tt12.jpeg', name: 'Black Printed Shirt', price: 'Rs.3,000' }
 ];
 
-const shirts = [
     // (Shirts data)
+const shirts = [
     { img: 'ss1.avif', name: 'White Printed Shirt', price: 'Rs.3,000' },
                 { img: 'ss2.jpg', name: 'Silk Back Shirt', price: 'Rs.3,000' },
                 { img: 'ss3.jpg', name: 'Classic Plain White Shirt', price: 'Rs.1,490' },
@@ -82,11 +74,11 @@ function viewProduct(image, name, price, description) {
 // Check which page is being loaded
 document.addEventListener('DOMContentLoaded', () => {
     const path = window.location.pathname; // Get the current page path
-    if (path.includes('womens_dresses.html')) {
-        displayProducts(dresses);
-    } else if (path.includes('womens_tops.html')) {
-        displayProducts(tops);
-    } else if (path.includes('womens_ethnic.html')) {
-        displayProducts(ethnic);
+    if (path.includes('kurtas.html')) {
+        displayProducts(kurtas);
+    } else if (path.includes('t-shirts.html')) {
+        displayProducts(t-shirts);
+    } else if (path.includes('shirts.html')) {
+        displayProducts(shirts);
     }
 });
