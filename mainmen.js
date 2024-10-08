@@ -2,16 +2,15 @@
 
 // (Men's Main Page)
 const mens = [
-    { img: 'kurta1.jpg', name: 'Elegant Kurta', price: 'Rs.2,500', description: 'A beautifully designed kurta with detailed embroidery.' },
-        { img: 'tshirt1.jpg', name: 'Classic T-Shirt', price: 'Rs.1,200', description: 'A comfortable cotton T-shirt with a classic fit.' },
-        { img: 'shirt1.jpg', name: 'Formal Shirt', price: 'Rs.3,000', description: 'Perfect for office or formal gatherings.' },
-        { img: 'shoes1.jpg', name: 'Leather Shoes', price: 'Rs.4,500', description: 'High-quality leather shoes with a premium finish.' },
-        { img: 'accessory1.jpg', name: 'Stylish Watch', price: 'Rs.5,500', description: 'A sleek, modern watch for everyday wear.' },
-        { img: 'kurta2.jpg', name: 'Casual Kurta', price: 'Rs.1,900', description: 'A lightweight casual kurta for everyday comfort.' },
-        { img: 'tshirt2.jpg', name: 'Graphic T-Shirt', price: 'Rs.1,500', description: 'A trendy T-shirt with eye-catching graphic designs.' },
-        { img: 'shirt2.jpg', name: 'Casual Shirt', price: 'Rs.2,300', description: 'Perfect for casual outings and relaxed evenings.' },
-        { img: 'shoes2.jpg', name: 'Running Shoes', price: 'Rs.3,200', description: 'Comfortable running shoes for daily wear.' },
-        { img: 'accessory2.jpg', name: 'Leather Belt', price: 'Rs.1,700', description: 'A premium leather belt to complete your outfit.' }
+    { img: 'mm1.jpeg', name: 'Elegant Kurta', price: 'Rs.2,500', description: 'A beautifully designed kurta with detailed embroidery.' },
+        { img: 'mm2.jpg', name: 'Classic T-Shirt', price: 'Rs.1,200', description: 'A comfortable cotton T-shirt with a classic fit.' },
+        { img: 'mm3.jpg', name: 'Formal Shirt', price: 'Rs.3,000', description: 'Perfect for office or formal gatherings.' },
+        { img: 'mm4.jpg', name: 'Leather Shoes', price: 'Rs.4,500', description: 'High-quality leather shoes with a premium finish.' },
+        { img: 'mm5.jpg', name: 'Stylish Watch', price: 'Rs.5,500', description: 'A sleek, modern watch for everyday wear.' },
+        { img: 'mm6.jpeg', name: 'Casual Kurta', price: 'Rs.1,900', description: 'A lightweight casual kurta for everyday comfort.' },
+        { img: 'mm7.jpg', name: 'Graphic T-Shirt', price: 'Rs.1,500', description: 'A trendy T-shirt with eye-catching graphic designs.' },
+        { img: 'mm8.avif', name: 'Casual Shirt', price: 'Rs.2,300', description: 'Perfect for casual outings and relaxed evenings.' },
+        { img: 'mm9.jpg', name: 'Running Shoes', price: 'Rs.3,200', description: 'Comfortable running shoes for daily wear.' },
 ];
 
     // (Kurtas data)
