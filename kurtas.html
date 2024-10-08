@@ -31,9 +31,28 @@
 
     <section id="kurtas" class="collection-section">
         <h2>Kurtas Collection</h2>
-        <div class="product-grid" id="productGrid"></div>
+        <div class="product-grid" id="productGrid">
+        </div>
     </section>
 
+     <script>
+        function viewProduct(image, name, price, description) {
+            const product = {
+                image: image,
+                name: name,
+                price: price,
+                description: description
+            };
+            // Store the product data in localStorage
+            localStorage.setItem('selectedProduct', JSON.stringify(product));
+    
+            // Redirect to the product details page
+            window.location.href = 'menproduct.html';
+        }
+    </script>
+
+     <script src="mainmen.js"></script>
+    
     <section id="about" class="about-section">
         <h2>About Us</h2>
         <p>At Offbeat Outlet, we believe in timeless style and unparalleled quality. Our collections are designed to empower women and enhance their natural beauty.</p>
@@ -48,50 +67,5 @@
     <footer>
         <p>&copy; 2024 Offbeat Outlet. All Rights Reserved.</p>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const products = [
-                { img: 'kk1.jpg', name: 'Elegant Kurta With Jacket', price: 'Rs.2,400' },
-                { img: 'kk2.jpg', name: 'Dark Blue Cotton Kurta', price: 'Rs.3,000' },
-                { img: 'kk3.jpeg', name: 'Stylish Skinny Kurta', price: 'Rs.2,690' },
-                { img: 'kk4.jpeg', name: 'Black Kurta', price: 'Rs.2,300' },
-                { img: 'kk5.avif', name: 'Elegant Shiny Green Kurta', price: 'Rs.3,290' },
-                { img: 'kk6.jpg', name: 'Plain Black Kurta', price: 'Rs.2,690' },
-                { img: 'kk7.avif', name: 'Blue Pattern Kurta', price: 'Rs.2,999' },
-                { img: 'kk8.avif', name: 'Multicolour Shinny Kurta', price: 'Rs.3,700' },
-                { img: 'kk9.avif', name: 'Black Chikankari Kurta', price: 'Rs.3,300' },
-                { img: 'kk10.webp', name: 'Blue Shaded Chikankari Kurta', price: 'Rs.2,500' },
-                { img: 'kk11.avif', name: 'Green Shinny Kurta', price: 'Rs.2,450' },
-                { img: 'kk12.avif', name: 'Dark Blue Kurta', price: 'Rs.3,000' }
-            ];
-
-            const productGrid = document.getElementById('productGrid');
-
-            products.forEach(product => {
-                const productItem = document.createElement('div');
-                productItem.classList.add('product-item');
-
-                productItem.innerHTML = `
-                    <img src="${product.img}" alt="${product.name}">
-                    <h3>${product.name}</h3>
-                    <p>${product.price}</p>
-                `;
-
-                // Optional: Add event listener for click event to view product
-                productItem.addEventListener('click', () => {
-                    viewProduct(product.img, product.name, product.price);
-                });
-
-                productGrid.appendChild(productItem);
-            });
-        });
-
-        function viewProduct(img, name, price) {
-            const selectedProduct = { img, name, price };
-            localStorage.setItem('selectedProduct', JSON.stringify(selectedProduct));
-            window.location.href = 'product-details.html';
-        }
-    </script>
 </body>
 </html>
