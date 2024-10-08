@@ -82,7 +82,7 @@ function displayProducts(products) {
 function viewProduct(image, name, price, description) {
     const product = { image, name, price, description };
     localStorage.setItem('selectedProduct', JSON.stringify(product));
-    window.location.href = 'product.html';
+    window.location.href = 'menproduct.html';
 }
 
 // Check which page is being loaded
