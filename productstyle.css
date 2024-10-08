@@ -51,7 +51,7 @@ header {
 }
 
 .product-image img {
-    width: 600px; /* Adjust this size as needed */
+    width: 750px; /* Adjust this size as needed */
     height: auto;
     object-fit: cover;
 }
