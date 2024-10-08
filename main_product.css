@@ -1,0 +1,208 @@
+body { 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#product-detail {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Slideshow Styles */
+.slideshow-container {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+}
+
+.item {
+  flex: 1 1 100%; /* 100% width on small screens */
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+img {
+    max-width: 100%; /* Ensure images are responsive */
+  height: auto;
+    border-radius: 8px;
+}
+
+.navigation {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Tablets and above */
+@media (min-width: 768px) {
+  .item {
+      flex: 1 1 48%; /* Two columns on tablets */
+  }
+}
+
+/* Desktops and above */
+@media (min-width: 1024px) {
+  .item {
+      flex: 1 1 30%; /* Three columns on desktops */
+  }
+}
+
+#navbar{
+background-color: black;
+color: aliceblue;
+height: auto;
+position: fixed;
+top: 0px;
+z-index: 1;
+padding-right: 200px;
+margin-top: 0%;
+padding-top: 0%;
+height: 60px;
+width: 100vw;
+}
+#navcontent{
+display: flex;
+text-decoration: none;
+margin-top: auto;
+margin-bottom: auto;
+flex-direction: row;
+justify-content: space-evenly;
+
+}
+li{
+display: inline;
+margin: 20px 30px 20px 30px;
+
+}
+.nav_links{
+text-decoration: none;
+color: aliceblue;
+height: fit-content;
+font-size: medium;
+}
+
+.link:hover {
+text-decoration: underline;
+}
+
+.link-container {
+display: block;
+width: 100%;
+height: 100%;
+position: relative;
+}
+
+.link{
+display: inline;
+text-align: center;
+color: black;
+font-weight:700;
+text-decoration: none;
+border: 2px solid black;
+padding: 1px;
+font-size:large ;
+}
+
+button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+/* Modal Styles */ 
+.modal { 
+    position: fixed; 
+    z-index: 1; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.5); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.modal-content {
+    background-color: #fff; 
+    padding: 20px; 
+    border-radius: 8px; 
+    width: 80%; 
+    max-width: 500px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+}
+
+.hidden { 
+    display: none; 
+}
+
+/* Table Styles */
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 10px; 
+}
+
+th, td { 
+    padding: 10px; 
+    text-align: left; 
+    border-bottom: 1px solid #ddd; 
+}
+
+th { 
+    background-color: #f2f2f2; 
+}
+
+/* Input and Textarea Styles */
+input[type="text"], 
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in total width */
+}
+
+/* Confirmation Message Styles */
+#confirmation-message {
+    font-size: 16px;
+    color: #333;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    button { 
+        width: 100%; 
+        padding: 15px; 
+    }
+    
+    .slideshow-container { 
+        width: 100%; 
+    }
+}
