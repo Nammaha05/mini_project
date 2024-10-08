@@ -26,7 +26,7 @@
       }
 
       .nav-links li {
-          margin: 0 15px;
+          margin: 0 35px;
           position: relative; /* drop downing */
       }
 
@@ -166,11 +166,11 @@
           background-color: #f7f7f7;
           padding: 20px;
           text-align: center;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
           display: flex;
           flex-direction: column; /* Stack items vertically */
           align-items: center; /* Center items horizontally */
-          border-radius: 10px;
+          /*border-radius: 10px;*/
       }
 
       .product-item:hover {
@@ -193,12 +193,12 @@
 
       .product-item h3 {
           font-size: 1.2rem;
-          margin-bottom: 5px;
+          margin-bottom: 1px;
       }
 
       .product-item p {
           font-size: 1rem;
-          color: #777;
+          /*color: #777;*/
       }
 
       /* About Section */
@@ -276,4 +276,4 @@
         .hero-section p {
           font-size: 1rem;
         }
-      }.
+      }
