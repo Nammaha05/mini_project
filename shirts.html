@@ -31,7 +31,7 @@
 
     <section id="shirts" class="collection-section">
         <h2>Shirts Collection</h2>
-        <div class="product-grid">
+        <div class="product-grid" id="productGrid">
             <div class="product-item">
                 <img src="ss1.avif" alt="Shirt 1">
                 <h3>White Printed Shirt</h3>
@@ -94,6 +94,24 @@
             </div>
         </div>
     </section>
+
+     <script>
+        function viewProduct(image, name, price, description) {
+            const product = {
+                image: image,
+                name: name,
+                price: price,
+                description: description
+            };
+            // Store the product data in localStorage
+            localStorage.setItem('selectedProduct', JSON.stringify(product));
+    
+            // Redirect to the product details page
+            window.location.href = 'menproduct.html';
+        }
+    </script>
+
+     <script src="mainmen.js"></script>
 
     <section id="about" class="about-section">
         <h2>About Us</h2>
