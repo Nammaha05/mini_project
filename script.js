@@ -4,6 +4,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     const products = [
+        { img: 'mm1.jpeg' , name: 'Denim Jacket' , price: 'Rs.3000' },
         { img: 'womens_images/womenstop1.jpg', name: 'Scoop-neck Microfibre Top', price: 'Rs. 799' },
         { img: 'womens_images/womenstop2.png', name: 'Oversized printed T-shirt', price: 'Rs. 1,299' },
         { img: 'womens_images/womenstop3.webp', name: 'Fine-knit polo shirt', price: 'Rs. 1,299.00' },
