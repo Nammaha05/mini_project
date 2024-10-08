@@ -1,61 +1,173 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Page</title>
+    <title>Product Page - Clothing</title>
     <link rel="stylesheet" href="main_product.css">
 </head>
 <body>
-    <div class="container">
-        <div class="product-page">
-            <!-- Breadcrumb -->
-            <div class="breadcrumb">
-                <a href="#">Home</a> > <a href="#">Shop</a> > <a href="#">Men</a> > Dark Olive Signature Heavyweight Faded T-shirt
-            </div>
-            
-            <!-- Product Image -->
-            <div class="product-image">
-                <img src="mm1.jpeg" alt="Dark Olive Signature T-shirt">
-            </div>
-
-            <!-- Product Details -->
-            <div class="product-details">
-                <h1>Dark Olive Signature Heavyweight Faded T-shirt</h1>
-                <div class="pricing">
-                    <span class="original-price">Rs. 1,199.00</span>
-                    <span class="discounted-price">Rs. 899.00</span>
-                    <span class="discount">SAVE 25%</span>
-                </div>
-
-                <!-- Size options -->
-                <div class="size-options">
-                    <h3>Size:</h3>
-                    <div class="sizes">
-                        <button>XS</button>
-                        <button>S</button>
-                        <button>M</button>
-                        <button>L</button>
-                        <button>XL</button>
-                        <button>XXL</button>
-                    </div>
-                </div>
-
-                <!-- Add to Cart Button -->
-                <div class="cart-section">
-                    <label for="quantity">Quantity:</label>
-                    <input type="number" id="quantity" value="1" min="1">
-                    <button class="add-to-cart">Add to Cart</button>
-                    <button class="buy-now">Buy It Now</button>
-                </div>
-
-                <!-- Share -->
-                <div class="share">
-                    <p>Share</p>
-                    <button>Share on WhatsApp</button>
-                </div>
-            </div>
+    
+    <header> 
+        <span id="navbar"> <ul id="navcontent"> <div id="name"> <li> OFFBEAT OUTLET </li></div> <li> 
+          <div class="dropdown">
+             <a href="newin.html" class="nav_links"> NEW IN </a>
+              <div class="dropdown-content">
+                  <a href="newin_croptop.html" onclick="displaySelected('NEW IN', 'Crop tops')">Crop tops</a>
+                  <a href="newin_kurti.html" onclick="displaySelected('NEW IN', 'Women short kurtis')"> Women short kurtis</a>
+                  <a href="newin_oversized.html" onclick="displaySelected('NEW IN', 'oversized t-shirts')">oversized t-shirts</a>
+                  <a href="newin_cargo.html" onclick="displaySelected('NEW IN', 'Latest Cargo')"> Latest Cargo jeans</a>
+                  </div>
+          </div>
+      </li>
+          <li>
+              <div class="dropdown">
+                  <a href="" class="nav_links"> WOMEN </a>
+              <div class="dropdown-content">
+                  <a href="dresses.html" onclick="displaySelected('WOMEN', 'Dresses')">Dresses</a>
+                  <a href="tops.html" onclick="displaySelected('WOMEN', 'Tops')"> Tops</a>
+                  <a href="bottoms.html" onclick="displaySelected('WOMEN', 'Bottoms')">Bottoms</a>
+                  <a href="jackets.html" onclick="displaySelected('WOMEN', 'Outwears')"> Jackets</a>
+                  </div> </div> </li>
+           <li>  <div class="dropdown">
+              <a href="" class="nav_links"> MEN</a>
+              <div class="dropdown-content">
+                  <a href="t-shirts.html" onclick="displaySelected('MEN', 'Ethnic Wear')">T-shirts</a>
+                  <a href="shirts.html" onclick="displaySelected('MEN', 'T-shirts')"> Shirts</a>
+                  <a href="shoes.html" onclick="displaySelected('MEN', 'Shirts')">Shoes</a>
+                <!-- <a href="#" onclick="displaySelected('MEN', 'Bottom')">Bottoms</a>-->
+                  </div> </div>
+           </li>
+            <li> 
+              <div class="dropdown">
+                  <a href="" class="nav_links"> KIDS</a>
+             <div class="dropdown-content">
+                 <a href="kidsTops&Tshirts.html" onclick="displaySelected('KIDS', 'T-shirts')">T-shirts & tops</a>
+                 <a href="kiddresses.html" onclick="displaySelected('KIDS', 'Sets-Suits')"> Dresses</a>
+                 <a href="kidsbottoms.html" onclick="displaySelected('KIDS', 'Bottoms')">Bottoms</a>
+                 <a href="kidsshoes.html" onclick="displaySelected('KIDS', 'Frocks & Dresses')">Shoes </a>
+               <!-- <a href="#" onclick="displaySelected('KIDS', 'Sweatshirts & Jackets')">Sweatshirts & Jackets </a>--> 
+              </div> </div> 
+            </li>
+          <li> 
+              <a class="nav_links" href="cart1.html">CART </a>
+          </li> 
+          </ul>  <p id="selectedItem"></p>
+         </span>  <script>
+          function displaySelected(category, item) {
+              const display = document.getElementById("selectedItem");
+              display.textContent = You selected: ${item} from ${category};
+          }
+      </script> </header> 
+    
+    <!-- Image Slideshow -->
+    <div class="slideshow-container">
+        <img id="slideshow-image" src="mm1.jpeg" alt="Product Image" style="width:100%">
+       <!--<img id="slideshow-image-2" src="image2.jpg" alt="Product Image" style="width:100%; display:none;"> --> 
+        <div class="navigation">
+          <!--  <button onclick="prevImage()">&#10094; Previous</button>
+            <button onclick="nextImage()">Next &#10095;</button>-->
         </div>
     </div>
+
+    <!-- Product Details -->
+    <div id="product-detail">
+        <h2 id="product-name">3-piece men's suit</h2>
+        <p>Price: <span id="product-price">50</span> USD</p>
+        <p>Description: Elevate your style with our Classic 3-Piece Men's Suit, designed for the modern gentleman who values sophistication and versatility. This meticulously tailored suit features a timeless cut that flatters all body types, ensuring you look your best for any occasion.
+
+            Key Features:
+            
+            Premium Fabric: Crafted from high-quality wool blend, this suit offers both comfort and durability, keeping you cool in warmer weather and warm in cooler climates.
+            
+            Tailored Fit: The jacket features a tailored silhouette with a single-breasted design, notch lapels, and a classic button closure, creating a sharp and polished look.
+            
+            Care Instructions: Dry clean only to maintain the suit's quality and shape.</p>
+        
+        <!-- Size Selection -->
+        <label for="size">Select Size:</label>
+        <select id="size">
+            <option value="S">S - Small</option>
+            <option value="M">M - Medium</option>
+            <option value="L">L - Large</option>
+            <option value="XL">XL - Extra Large</option>
+        </select>
+        <button onclick="showSizeChart()">Size Chart</button>
+        
+        <button onclick="addToCart()">Add to Cart</button>
+        <button onclick="openCheckout()">Go to Cart</button>
+        <button onclick="shopNow()">Shop Now</button>
+    </div>
+
+    <!-- Size Chart Modal -->
+    <div id="size-chart-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Size Chart</h2>
+            <table>
+                <tr>
+                    <th>Size</th>
+                    <th>Chest (inches)</th>
+                    <th>Waist (inches)</th>
+                    <th>Length (inches)</th>
+                </tr>
+                <tr>
+                    <td>S</td>
+                    <td>34-36</td>
+                    <td>28-30</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>M</td>
+                    <td>38-40</td>
+                    <td>32-34</td>
+                    <td>27</td>
+                </tr>
+                <tr>
+                    <td>L</td>
+                    <td>42-44</td>
+                    <td>36-38</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <td>XL</td>
+                    <td>46-48</td>
+                    <td>40-42</td>
+                    <td>29</td>
+                </tr>
+            </table>
+            <button onclick="closeSizeChart()">Close</button>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Enter Your Address</h2>
+            <input type="text" id="address" placeholder="Your Address" required>
+            <input type="text" id="city" placeholder="City" required>
+            <input type="text" id="state" placeholder="State" required>
+            <input type="text" id="zip" placeholder="ZIP Code" required>
+            <h3>Select Payment Method:</h3>
+            <select id="payment-method">
+                <option value="Credit Card">Credit Card</option>
+                <option value="PayPal">PayPal</option>
+                <option value="Bank Transfer">Bank Transfer</option>
+                <option value="Cash on Delivery">Cash on Delivery</option> <!-- Added Cash on Delivery option -->
+            </select>
+            <button onclick="confirmOrder()">Confirm Order</button>
+            <button onclick="closePaymentModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmation-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Order Confirmed!</h2>
+            <p id="confirmation-message"></p>
+            <button onclick="closeConfirmation()">Close</button>
+        </div>
+    </div>
+
+    <script src="main_product.js"></script>
 </body>
 </html>
