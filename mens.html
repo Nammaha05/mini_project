@@ -16,15 +16,14 @@
                     <a href="#categories">Categories</a>
                     <ul class="dropdown-menu">
                         <li><a href="kurtas.html">Kurtas</a></li>
-                        <li><a href="t-shirts.html">T-shirts</a></li>
+                        <li><a href="t-shirts.html">T-Shirts</a></li>
                         <li><a href="shirts.html">Shirts</a></li>
                         <li><a href="shoes.html">Shoes</a></li>
                         <li><a href="#accessories">Accessories</a></li>
                     </ul>
                 </li>
-            <!--<li><a href="#collection">Collection</a></li>-->
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <li><a href="cart.html">Cart</a></li>
             </ul>
         </nav>
@@ -38,61 +37,25 @@
 
     <section id="collection" class="collection-section">
         <h2>Our Collection</h2>
-        <div class="product-grid">
-            <div class="product-item">
-                <img src="mm1.jpeg" alt="product 1">
-                <h3>Demin Jacket</h3>
-                <p>Rs.3000</p>
-            </div>
-            <div class="product-item">
-              <img src="mm2.jpg" alt="product 2">
-              <h3>White Shirt</h3>
-                <p>Rs.1700</p>
-            </div>
-            <div class="product-item">
-              <img src="mm3.jpg" alt="product 3">
-              <h3>Stylish Jacket</h3>
-                <p>Rs.2500</p>
-            </div>
-            
-            
-        </div>
-        <div class="product-grid">
-            <div class="product-item">
-              <img src="mm4.jpg" alt="product 4">
-              <h3>Black three piece suit </h3>
-                <p>Rs.999</p>
-            </div>
-            <div class="product-item">
-              <img src="mm5.jpg" alt="product 5">
-              <h3>White Kurta</h3>
-                <p>Rs.1700</p>
-            </div>
-            <div class="product-item">
-              <img src="mm6.jpeg" alt="product 6">
-              <h3>Black Kurta</h3>
-                <p>Rs.999</p>
-            </div>
-        </div>
-        <div class="product-grid">
-            <div class="product-item">
-              <img src="mm7.jpg" alt="product 7">
-              <h3>Elegant suit</h3>
-                <p>Rs.2999</p>
-            </div>
-            <div class="product-item">
-              <img src="mm8.avif" alt="product 8">
-              <h3>Chikankari Kurta</h3>
-                <p>Rs.3700</p>
-            </div>
-            <div class="product-item">
-              <img src="mm9.jpg" alt="product 9">
-              <h3>White Hoodie</h3>
-                 <p>Rs.1300</p>
-             </div>
-        </div>
+        <div class="product-grid" id="productGrid">
+        </div> <!-- Empty container to populate products -->
     </section>
-
+    <script>
+        function viewProduct(image, name, price, description) {
+            const product = {
+                image: image,
+                name: name,
+                price: price,
+                description: description
+            };
+            // Store the product data in localStorage
+            localStorage.setItem('selectedProduct', JSON.stringify(product));
+    
+            // Redirect to the product details page
+            window.location.href = 'product.html';
+        }
+    </script>
+    
     <section id="about" class="about-section">
         <h2>About Us</h2>
         <p>At Offbeat Outlet, we believe in timeless style and unparalleled quality. Our collections are designed to empower women and enhance their natural beauty.</p>
@@ -107,5 +70,7 @@
     <footer>
         <p>&copy; 2024 Offbeat Outlet. All Rights Reserved.</p>
     </footer>
+
+    <script src="mainmen.js"></script> <!-- Link to the JavaScript file -->
 </body>
 </html>
