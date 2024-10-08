@@ -7,23 +7,82 @@
     <link rel="stylesheet" href="main_product.css">
 </head>
 <body>
-    <h1>Clothing Product</h1>
+    
+    <header> 
+        <span id="navbar"> <ul id="navcontent"> <div id="name"> <li> OFFBEAT OUTLET </li></div> <li> 
+          <div class="dropdown">
+             <a href="newin.html" class="nav_links"> NEW IN </a>
+              <div class="dropdown-content">
+                  <a href="newin_croptop.html" onclick="displaySelected('NEW IN', 'Crop tops')">Crop tops</a>
+                  <a href="newin_kurti.html" onclick="displaySelected('NEW IN', 'Women short kurtis')"> Women short kurtis</a>
+                  <a href="newin_oversized.html" onclick="displaySelected('NEW IN', 'oversized t-shirts')">oversized t-shirts</a>
+                  <a href="newin_cargo.html" onclick="displaySelected('NEW IN', 'Latest Cargo')"> Latest Cargo jeans</a>
+                  </div>
+          </div>
+      </li>
+          <li>
+              <div class="dropdown">
+                  <a href="" class="nav_links"> WOMEN </a>
+              <div class="dropdown-content">
+                  <a href="dresses.html" onclick="displaySelected('WOMEN', 'Dresses')">Dresses</a>
+                  <a href="tops.html" onclick="displaySelected('WOMEN', 'Tops')"> Tops</a>
+                  <a href="bottoms.html" onclick="displaySelected('WOMEN', 'Bottoms')">Bottoms</a>
+                  <a href="jackets.html" onclick="displaySelected('WOMEN', 'Outwears')"> Jackets</a>
+                  </div> </div> </li>
+           <li>  <div class="dropdown">
+              <a href="" class="nav_links"> MEN</a>
+              <div class="dropdown-content">
+                  <a href="t-shirts.html" onclick="displaySelected('MEN', 'Ethnic Wear')">T-shirts</a>
+                  <a href="shirts.html" onclick="displaySelected('MEN', 'T-shirts')"> Shirts</a>
+                  <a href="shoes.html" onclick="displaySelected('MEN', 'Shirts')">Shoes</a>
+                <!-- <a href="#" onclick="displaySelected('MEN', 'Bottom')">Bottoms</a>-->
+                  </div> </div>
+           </li>
+            <li> 
+              <div class="dropdown">
+                  <a href="" class="nav_links"> KIDS</a>
+             <div class="dropdown-content">
+                 <a href="kidsTops&Tshirts.html" onclick="displaySelected('KIDS', 'T-shirts')">T-shirts & tops</a>
+                 <a href="kiddresses.html" onclick="displaySelected('KIDS', 'Sets-Suits')"> Dresses</a>
+                 <a href="kidsbottoms.html" onclick="displaySelected('KIDS', 'Bottoms')">Bottoms</a>
+                 <a href="kidsshoes.html" onclick="displaySelected('KIDS', 'Frocks & Dresses')">Shoes </a>
+               <!-- <a href="#" onclick="displaySelected('KIDS', 'Sweatshirts & Jackets')">Sweatshirts & Jackets </a>--> 
+              </div> </div> 
+            </li>
+          <li> 
+              <a class="nav_links" href="cart1.html">CART </a>
+          </li> 
+          </ul>  <p id="selectedItem"></p>
+         </span>  <script>
+          function displaySelected(category, item) {
+              const display = document.getElementById("selectedItem");
+              display.textContent = `You selected: ${item} from ${category}`;
+          }
+      </script> </header> 
     
     <!-- Image Slideshow -->
     <div class="slideshow-container">
         <img id="slideshow-image" src="s2.jpg" alt="Product Image" style="width:100%">
-        <img id="slideshow-image-2" src="image2.jpg" alt="Product Image" style="width:100%; display:none;">
+       <!--<img id="slideshow-image-2" src="image2.jpg" alt="Product Image" style="width:100%; display:none;"> --> 
         <div class="navigation">
-            <button onclick="prevImage()">&#10094; Previous</button>
-            <button onclick="nextImage()">Next &#10095;</button>
+          <!--  <button onclick="prevImage()">&#10094; Previous</button>
+            <button onclick="nextImage()">Next &#10095;</button>-->
         </div>
     </div>
 
     <!-- Product Details -->
     <div id="product-detail">
-        <h2 id="product-name">Stylish T-Shirt</h2>
-        <p>Price: <span id="product-price">25.00</span> USD</p>
-        <p>Description: A comfortable and stylish t-shirt available in multiple colors.</p>
+        <h2 id="product-name">3-piece men's suit</h2>
+        <p>Price: <span id="product-price">50</span> USD</p>
+        <p>Description: Elevate your style with our Classic 3-Piece Men's Suit, designed for the modern gentleman who values sophistication and versatility. This meticulously tailored suit features a timeless cut that flatters all body types, ensuring you look your best for any occasion.
+
+            Key Features:
+            
+            Premium Fabric: Crafted from high-quality wool blend, this suit offers both comfort and durability, keeping you cool in warmer weather and warm in cooler climates.
+            
+            Tailored Fit: The jacket features a tailored silhouette with a single-breasted design, notch lapels, and a classic button closure, creating a sharp and polished look.
+            
+            Care Instructions: Dry clean only to maintain the suit's quality and shape.</p>
         
         <!-- Size Selection -->
         <label for="size">Select Size:</label>
