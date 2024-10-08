@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tops Collection</title>
+    <title>Ethnic Collection</title>
     <link rel="stylesheet" href="womenstyle.css">
 </head>
 <body>
@@ -15,11 +15,11 @@
                 <li class="dropdown">
                     <a href="#categories">Categories</a>
                     <ul class="dropdown-menu">
-                        <li><a href="dresses.html">Dresses</a></li>
-                        <li><a href="tops.html">Tops</a></li>
-                        <li><a href="bottoms.html">Bottoms</a></li>
-                        <li><a href="jackets.html">Outerwear</a></li>
-                        <li><a href="#accessories">Accessories</a></li>
+                        <li><a href="womens_dresses.html">Dresses</a></li>
+                        <li><a href="womens_tops.html">Tops</a></li>
+                        <li><a href="womens_bottoms.html">Bottoms</a></li>
+                        <li><a href="womens_ethnic.html">Outerwear</a></li>
+                        <li><a href="womens_accessories.html">Accessories</a></li>
                     </ul>
                 </li>
                 <li><a href="about.html">About Us</a></li>
@@ -30,9 +30,25 @@
     </header>
 
     <section id="tops" class="collection-section">
-        <h2>Tops Collection</h2>
+        <h2>Ethnic Collection</h2>
         <div class="product-grid" id="productGrid"></div> <!-- Empty container to populate products -->
     </section>
+
+    <script>
+        function viewProduct(image, name, price, description) {
+            const product = {
+                image: image,
+                name: name,
+                price: price,
+                description: description
+            };
+            // Store the product data in localStorage
+            localStorage.setItem('selectedProduct', JSON.stringify(product));
+    
+            // Redirect to the product details page
+            window.location.href = 'product.html';
+        }
+    </script>
 
     <section id="about" class="about-section">
         <h2>About Us</h2>

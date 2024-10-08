@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tops Collection</title>
+    <title>Dresses Collection</title>
     <link rel="stylesheet" href="womenstyle.css">
 </head>
 <body>
@@ -29,11 +29,11 @@
         </nav>
     </header>
 
-    <section id="tops" class="collection-section">
-        <h2>Tops Collection</h2>
-        <div class="product-grid" id="productGrid">
-        </div> <!-- Empty container to populate products -->
+    <section id="dresses" class="collection-section">
+        <h2>Dresses Collection</h2>
+        <div class="product-grid" id="productGrid"></div>
     </section>
+
     <script>
         function viewProduct(image, name, price, description) {
             const product = {
@@ -49,7 +49,9 @@
             window.location.href = 'product.html';
         }
     </script>
-    
+
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+
     <section id="about" class="about-section">
         <h2>About Us</h2>
         <p>At Offbeat Outlet, we believe in timeless style and unparalleled quality. Our collections are designed to empower women and enhance their natural beauty.</p>
@@ -64,7 +66,5 @@
     <footer>
         <p>&copy; 2024 Offbeat Outlet. All Rights Reserved.</p>
     </footer>
-
-    <script src="script.js"></script> <!-- Link to the JavaScript file -->
 </body>
 </html>
