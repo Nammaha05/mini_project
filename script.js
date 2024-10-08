@@ -18,6 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
         { img: 'womens_images/womenstop12.png', name: 'Short vest top', price: 'Rs. 699.00' }
     ];
 
+    const products = [
+        { img: 'mm1.jpeg' , name: 'Denim Jacket' , price: 'Rs.3000' }
+        ];
+
     const productGrid = document.getElementById('productGrid');
 
     products.forEach(product => {
