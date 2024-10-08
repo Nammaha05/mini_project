@@ -2,6 +2,17 @@
 //he product grid sathi ahee
 
 
+const collection = [
+    { img: 'womens_images/womens1.png', name: 'Elegant Dress', price: 'Rs.3000' },
+    { img: 'womens_images/womens2.png', name: 'Chic Blouse', price: 'Rs.1700' },
+    { img: 'womens_images/womens3.png', name: 'Black Square Neck Top', price: 'Rs.999' },
+    { img: 'womens_images/womens4.png', name: 'Ribbed Red Top', price: 'Rs.1700' },
+    { img: 'womens_images/womens5.png', name: 'Grey Square Neck Top', price: 'Rs.999' },
+    { img: 'womens_images/womens6.png', name: 'Wide Cargo Trousers', price: 'Rs.2999' },
+    { img: 'womens_images/womens7.png', name: 'Coated Jacket', price: 'Rs.3700' },
+    { img: 'womens_images/womens8.png', name: 'Cotton Shirt', price: 'Rs.1300' },
+    { img: 'womens_images/womens9.png', name: 'Stylish Skirt', price: 'Rs.2500' }
+];
 
 
 
@@ -58,6 +69,22 @@ const ethnic = [
 
 ];
 
+const bottoms = [
+    { img: 'womens_images/womensbottoms1.png', name: 'Straight Leg Jeans', price: 'Rs.2,400' },
+    { img: 'womens_images/womensbottoms2.png', name: 'High-Waist Palazzo Jeans', price: 'Rs.3,000' },
+    { img: 'womens_images/womensbottoms3.png', name: 'Seam Straight Leg Jeans', price: 'Rs.2,690' },
+    { img: 'womens_images/womensbottoms4.png', name: 'Buttoned Denim A-Line Skirt', price: 'Rs.2,300' },
+    { img: 'womens_images/womensbottoms5.png', name: 'Wide Leg Jeans', price: 'Rs.3,290' },
+    { img: 'womens_images/womensbottoms6.png', name: 'Low-Waist Wide Leg Jeans', price: 'Rs.2,690' },
+    { img: 'womens_images/womensbottoms7.png', name: 'Flare Leg Jeans', price: 'Rs.2,999' },
+    { img: 'womens_images/womensbottoms8.png', name: 'Cut Out Skinny Jeans', price: 'Rs.3,700' },
+    { img: 'womens_images/womensbottoms9.png', name: 'Darted Tapered Pants', price: 'Rs.3,300' },
+    { img: 'womens_images/womensbottoms10.png', name: 'Pocket Straight Leg Pants', price: 'Rs.2,500' },
+    { img: 'womens_images/womensbottoms11.png', name: 'Straight Leg Pants', price: 'Rs.2,450' },
+    { img: 'womens_images/womensbottoms12.png', name: 'Patchwork Wide Leg Pants', price: 'Rs.3,000' }
+];
+
+
 // Function to display products
 function displayProducts(products) {
     const productGrid = document.getElementById('productGrid');
@@ -84,11 +111,15 @@ function viewProduct(image, name, price, description) {
 // Check which page is being loaded
 document.addEventListener('DOMContentLoaded', () => {
     const path = window.location.pathname; // Get the current page path
-    if (path.includes('womens_dresses.html')) {
+     if (path.includes('womens.html')) {
+        displayProducts(collection);
+    }else if (path.includes('womens_dresses.html')) {
         displayProducts(dresses);
     } else if (path.includes('womens_tops.html')) {
         displayProducts(tops);
     } else if (path.includes('womens_ethnic.html')) {
         displayProducts(ethnic);
+    } else if (path.includes('womens_bottoms.html')) {
+        displayProducts(bottoms);
     }
 });
