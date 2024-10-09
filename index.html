@@ -8,26 +8,71 @@
 </head>
 <body style="color: black">
    <header> 
-  <span id="navbar"> <ul id="navcontent"> <div id="name"> <li> OFFBEAT OUTLET </li></div> <li> <a class="nav_links" href="womens.html">WOMEN</a></li>
-    <li> <a class="nav_links" href="mens.html">MEN</a></li> <!--<li> <a class="nav_links" href="accessories.html"> Accessories</a> </li> --><li> <a class="nav_links" href="account.html"> Account</a></li>
-      <li> <a class="nav_links" href="contact.html"> Contact Us</a></li>
-    <li> <a class="nav_links" href="cart.html">Cart </a> </li></ul> 
-   </span> </header> 
+  <span id="navbar"> <ul id="navcontent"> <div id="name"> <li> OFFBEAT OUTLET </li></div> <li> 
+    <div class="dropdown">
+       <a href="newin1.html" class="nav_links"> NEW IN </a>
+        <div class="dropdown-content">
+            <a href="newinCroptop.html" onclick="displaySelected('NEW IN', 'Crop tops')">Crop tops</a>
+            <a href="newinKurti.html" onclick="displaySelected('NEW IN', 'Women short kurtis')"> Women short kurtis</a>
+            <a href="newinOversized.html" onclick="displaySelected('NEW IN', 'oversized t-shirts')">oversized t-shirts</a>
+            <a href="newinCargo.html" onclick="displaySelected('NEW IN', 'Latest Cargo')"> Latest Cargo jeans</a>
+            </div>
+    </div>
+</li>
+    <li>
+        <div class="dropdown">
+            <a href="women.html" class="nav_links"> WOMEN </a>
+        <div class="dropdown-content">
+            <a href="dresses.html" onclick="displaySelected('WOMEN', 'Dresses')">Dresses</a>
+            <a href="tops.html" onclick="displaySelected('WOMEN', 'Tops')"> Tops</a>
+            <a href="bottoms.html" onclick="displaySelected('WOMEN', 'Bottoms')">Bottoms</a>
+            <a href="jackets.html" onclick="displaySelected('WOMEN', 'Outwears')"> Jackets</a>
+            </div> </div> </li>
+     <li>  <div class="dropdown">
+        <a href="mens.html" class="nav_links"> MEN</a>
+        <div class="dropdown-content">
+            <a href="t-shirts.html" onclick="displaySelected('MEN', 'Ethnic Wear')">T-shirts</a>
+            <a href="shirts.html" onclick="displaySelected('MEN', 'T-shirts')"> Shirts</a>
+            <a href="shoes.html" onclick="displaySelected('MEN', 'Shirts')">Shoes</a>
+          <!-- <a href="#" onclick="displaySelected('MEN', 'Bottom')">Bottoms</a>-->
+            </div> </div>
+     </li>
+      <li> 
+        <div class="dropdown">
+            <a href="kidsindex.html" class="nav_links"> KIDS</a>
+       <div class="dropdown-content">
+           <a href="kidsTops&Tshirts.html" onclick="displaySelected('KIDS', 'T-shirts')">T-shirts & tops</a>
+           <a href="kiddresses.html" onclick="displaySelected('KIDS', 'Sets-Suits')"> Dresses</a>
+           <a href="kidsbottoms.html" onclick="displaySelected('KIDS', 'Bottoms')">Bottoms</a>
+           <a href="kidsshoes.html" onclick="displaySelected('KIDS', 'Frocks & Dresses')">Shoes </a>
+         <!-- <a href="#" onclick="displaySelected('KIDS', 'Sweatshirts & Jackets')">Sweatshirts & Jackets </a>--> 
+        </div> </div> 
+      </li>
+    <li> 
+        <a class="nav_links" href="cart.html">CART </a>
+    </li> 
+    </ul>  <p id="selectedItem"></p>
+   </span>  <script>
+    function displaySelected(category, item) {
+        const display = document.getElementById("selectedItem");
+        display.textContent = `You selected: ${item} from ${category}`;
+    }
+</script> </header> 
   <main> <section id="shop1"> 
     <div class="slideshow">
         <div class="slide" style="background-image: url('project1.jpg');">
-            <a href="https://example.com/page1" class="slide-link">
-                <p><a href="https://example.com/page1" class="link"> SHOP NOW </a> </p>
+            <a href="casualwear.html" class="slide-link">
+                <p><a href="casualwear.html" class="link"> SHOP NOW </a> </p>
             </a>
         </div>
         <div class="slide" style="background-image: url('project img2.jpg');">
-            <a href="https://example.com/page2" class="slide-link">
-                <p >  <a href="https://example.com/page2" class="link">SHOP NOW</a></p> 
+            <a href="ethinic.html" class="slide-link">
+                <p >  <a href="ethinic.html" class="link">SHOP NOW</a></p> 
               </a>
         </div>
         <div class="slide" style="background-image: url('project img3.jpg');">
-            <a href="https://example.com/page3" class="slide-link">
-                <p > <a href="https://example.com/page3" class="link">SHOP NOW</a></p>
+            <a href="newinCargo.html" class="slide-link">
+                <p > <a href="newinCargo.html" class="link">SHOP NOW</a></p>
             </a>
         </div>
     </div>
@@ -54,56 +99,57 @@
     </script>
   </section> <br> <br> <br>
     <section id="shop2">
-    <span>  <a href="women_collection.html"> <img id="imgw1"src="w1.jpg" height="600px" width="400px"> </a> <span> 
-   <span> <a href="men_collection.html"> <img id="imgm1"src="m1.jpg" height="600px" width="400px"> </a> </span>
-   <span>  <a href="kids_collection.html"> <img id="imgk1" src="k1.jpg" height="600px" width="400px"> </a> </span>
+    <span>  <a href="women.html"> <img id="imgw1"src="w1.jpg" height="600px" width="400px"> </a> <span> 
+   <span> <a href="mens.html"> <img id="imgm1"src="m1.jpg" height="600px" width="400px"> </a> </span>
+   <span>  <a href="kidsstyle.html"> <img id="imgk1" src="k1.jpg" height="600px" width="400px"> </a> </span>
    </section>
     <br><br> <br> 
 
-    <section id="gallery">
+<section id="gallery">
        <div class="gallery-content"> 
         <span class="main-content"> 
-            <a href="" class="product-type"> <img src="s2.jpg" alt="image not available"> 
-             <p >3-piece men's suit <br> &#8377;5500/- </p>  </a>
+            <a href="main_product1.html" class="product-type"> <img src="s2.jpg"  class="product-image" alt="image not available"> 
+             <p >3-piece men's suit <br> 50 USD</p>  </a>
         </span>
         <span class="main-content">
-             <a href="" class="product-type"> <img src="s3.jpg" alt="image not available"> 
-             <p>2-piece men's suit <br> &#8377;2500/- </p>  </a>
+             <a href="main_product2.html" class="product-type"> <img src="s3.jpg" class="product-image" alt="image not available"> 
+             <p>2-piece men's suit <br>60 USD </p>  </a>
             </span> 
         <span class="main-content"> 
-            <a href="" class="product-type"> <img src="s4.jpg" alt="image not available"> 
-            <p >women's white sweater <br> &#8377;800/- </p>  </a>
+            <a href="main_product3.html" class="product-type"> <img src="s4.jpg" class="product-image" alt="image not available"> 
+            <p >women's white sweater <br> 10 USD </p>  </a>
         </span>
        </div> 
        <div class="gallery-content" > 
         <span class="main-content"> 
-            <a href="" class="product-type"> <img src="s5.jpg" alt="image not available">  
-             <p >men's beige pant <br> &#8377;1500/- </p>  </a>
+            <a href="main_product4.html" class="product-type"> <img src="s5.jpg" class="product-image" alt="image not available" >  
+             <p >men's beige pant <br> 25 USD </p>  </a>
         </span>
         <span class="main-content">
-             <a href=""class="product-type" > <img src="s6.jpg" alt="image not available">  
+             <a href="main_product1.html" class="product-type" > <img src="s6.jpg" class="product-image" alt="image not available">  
              <p>A-line one piece <br> &#8377;2,000/- </p>  </a>
             </span> 
         <span class="main-content"> 
-            <a href="" class="product-type"> <img src="s7.jpg" alt="image not available"> 
+            <a href="main_product1.html" class="product-type"> <img src="s7.jpg" class="product-image" alt="image not available"> 
             <p>black off-shoulder co-ord set <br> &#8377;800/- </p>  </a>
         </span>
        </div>
        <div class="gallery-content"> 
         <span class="main-content"> 
-            <a href="" class="product-type"> <img src="s8.jpg" alt="image not available">  
+            <a href="main_product1.html" class="product-type"> <img src="s8.jpg"class="product-image"  alt="image not available">  
              <p >high waist baggy jeans <br> &#8377;2,000/- </p>  </a>
         </span>
         <span class="main-content">
-             <a href="" class="product-type"> <img src="s9.jpg" alt="image not available"> 
+             <a href="" class="product-type"> <img src="s9.jpg" class="product-image" alt="image not available"> 
              <p> chikankari white dress <br> &#8377;2,500/- </p> </a>
             </span> 
         <span class="main-content"> 
-            <a href="" class="product-type"> <img src="s10.jpg" alt="image not available">  
+            <a href="" class="product-type"> <img src="s10.jpg" class="product-image" alt="image not available">  
             <p >Men's white shirt<br> &#8377;800/- </p>  </a>
         </span>
           </div>
     </section>
+    
     
   </main>
 <footer>  
