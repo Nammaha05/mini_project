@@ -1,17 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
     const products = [
-        { img: 'newin/no1.webp', name: 'Korean love symbol Oversized T-shirt', price: 'Rs. 799' },
-        { img: 'newin/no2.avif', name: 'Venom Oversized T-shirt', price: 'Rs. 1,299' },
-        { img: 'newin/no3.avif', name: 'Printed Oversized T-shirt', price: 'Rs. 1,299.00' },
-        { img: 'newin/no4.avif', name: 'Brown Printed Oversized T-shirt', price: 'Rs. 799.00' },
-        { img: 'newin/no5.avif', name: 'Panther Oversized T-shirt', price: 'Rs. 799.00' },
-        { img: 'newin/no6.avif', name: 'Bob-Sponge Oversized T-shirt', price: 'Rs. 999.00' },
-        { img: 'newin/no7.avif', name: 'Leopard Printed Oversized T-shirt', price: 'Rs. 1,499.00' },
-        { img: 'newin/no8.avif', name: 'Red Printed Oversized T-shirt', price: 'Rs. 699.00' },
-        { img: 'newin/no9.avif', name: 'Pink Calligraphed Oversized T-shirts', price: 'Rs. 1,899.00' },
-        { img: 'newin/no10.avif', name: 'Light brown Printed Oversized T-shirts', price: 'Rs. 1,899.00' },
-        { img: 'newin/no11.avif', name: 'Bollmer Oversized T-shirt<', price: 'Rs. 1,899.00' },
-        { img: 'newin/no12.avif', name: 'Colorfully designed Oversized T-shirt', price: 'Rs. 699.00' }
+        { img: 'no1.webp', name: 'Korean love symbol Oversized T-shirt', price: 'Rs. 799' },
+        { img: 'no2.avif', name: 'Venom Oversized T-shirt', price: 'Rs. 1,299' },
+        { img: 'no3.avif', name: 'Printed Oversized T-shirt', price: 'Rs. 1,299.00' },
+        { img: 'no4.avif', name: 'Brown Printed Oversized T-shirt', price: 'Rs. 799.00' },
+        { img: 'no5.avif', name: 'Panther Oversized T-shirt', price: 'Rs. 799.00' },
+        { img: 'no6.avif', name: 'Bob-Sponge Oversized T-shirt', price: 'Rs. 999.00' },
+        { img: 'no7.avif', name: 'Leopard Printed Oversized T-shirt', price: 'Rs. 1,499.00' },
+        { img: 'no8.avif', name: 'Red Printed Oversized T-shirt', price: 'Rs. 699.00' },
+        { img: 'no9.avif', name: 'Pink Calligraphed Oversized T-shirts', price: 'Rs. 1,899.00' },
+        { img: 'no10.avif', name: 'Light brown Printed Oversized T-shirts', price: 'Rs. 1,899.00' },
+        { img: 'no11.avif', name: 'Bollmer Oversized T-shirt<', price: 'Rs. 1,899.00' },
+        { img: 'no12.avif', name: 'Colorfully designed Oversized T-shirt', price: 'Rs. 699.00' }
     ];
 
     const productGrid = document.getElementById('productGrid');
