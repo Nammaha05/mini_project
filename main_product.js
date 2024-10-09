@@ -48,7 +48,7 @@ function addToCart() {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
-    alert(`${productName} (Size: ${size}) has been added to your cart.`);
+    alert('${productName} (Size: ${size}) has been added to your cart.');
 }
 
 function openCheckout() {
@@ -93,3 +93,5 @@ function closePaymentModal() {
 function closeConfirmation() {
     document.getElementById('confirmation-modal').classList.add('hidden');
 }
+   
+  
