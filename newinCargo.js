@@ -4,18 +4,18 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     const products = [
-        { img: 'newin/nc1.jpg', name: 'High waist Straight fit Wide leg Cargo jeans', price: 'Rs. 799' },
-        { img: 'newin/nc2.jpg', name: 'High waist Straight fit Cargo jeans', price: 'Rs. 1,299' },
-        { img: 'newin/nc3.jpg', name: 'High waist Straight fit Cargo jeans', price: 'Rs. 1,299.00' },
-        { img: 'newin/nc4.jpg', name: 'High waist black Straight fit Cargo jeans', price: 'Rs. 799.00' },
-        { img: 'newin/nc5.jpg', name: 'High waist Boot cut Cargo jeans', price: 'Rs. 799.00' },
-        { img: 'newin/nc6.jpg', name: 'High waist Straight fit Cargo jeans', price: 'Rs. 999.00' },
-        { img: 'newin/nc7.jpg', name: 'High waist Baggy Cargo jean', price: 'Rs. 1,499.00' },
-        { img: 'newin/nc8.jpg', name: 'High waist Boot cut Cargo jeanst', price: 'Rs. 699.00' },
-        { img: 'newin/nc9.jpg', name: 'High waist Straight fit Cargo jeans', price: 'Rs. 1,899.00' },
-        { img: 'newin/nc10.jpg', name: 'High waist Boot cut Cargo jeans', price: 'Rs. 1,899.00' },
-        { img: 'newin/nc11.jpg', name: 'High waist flarred Cargo jeans', price: 'Rs. 1,899.00' },
-        { img: 'newin/nc12.jpg', name: 'High rise wide leg cargo jeans', price: 'Rs. 699.00' }
+        { img: 'nc1.jpg', name: 'High waist Straight fit Wide leg Cargo jeans', price: 'Rs. 799' },
+        { img: 'nc2.jpg', name: 'High waist Straight fit Cargo jeans', price: 'Rs. 1,299' },
+        { img: nc3.jpg', name: 'High waist Straight fit Cargo jeans', price: 'Rs. 1,299.00' },
+        { img: 'nc4.jpg', name: 'High waist black Straight fit Cargo jeans', price: 'Rs. 799.00' },
+        { img: 'nc5.jpg', name: 'High waist Boot cut Cargo jeans', price: 'Rs. 799.00' },
+        { img: 'nc6.jpg', name: 'High waist Straight fit Cargo jeans', price: 'Rs. 999.00' },
+        { img: 'nc7.jpg', name: 'High waist Baggy Cargo jean', price: 'Rs. 1,499.00' },
+        { img: 'nc8.jpg', name: 'High waist Boot cut Cargo jeanst', price: 'Rs. 699.00' },
+        { img: 'nc9.jpg', name: 'High waist Straight fit Cargo jeans', price: 'Rs. 1,899.00' },
+        { img: 'nc10.jpg', name: 'High waist Boot cut Cargo jeans', price: 'Rs. 1,899.00' },
+        { img: 'nc11.jpg', name: 'High waist flarred Cargo jeans', price: 'Rs. 1,899.00' },
+        { img: 'nc12.jpg', name: 'High rise wide leg cargo jeans', price: 'Rs. 699.00' }
     ];
 
     const productGrid = document.getElementById('productGrid');
