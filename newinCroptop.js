@@ -1,17 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
     const products = [
-        { img: 'newin/nt1.jpg', name: 'Brown-peach colored floral Gorgette crop top', price: 'Rs. 799' },
-        { img: 'newin/nt2.jpg', name: 'Knitted white crop top', price: 'Rs. 1,299' },
-        { img: 'newin/nt3.avif', name: 'Black Polyster crop top', price: 'Rs. 1,299.00' },
-        { img: 'newin/nt4.avif', name: 'Short ruffle sleeved red crop top', price: 'Rs. 799.00' },
-        { img: 'newin/nt5.avif', name: 'Long sleeved off-shoulder floral top', price: 'Rs. 799.00' },
-        { img: 'newin/nt6.avif', name: 'Long sleeved black top', price: 'Rs. 999.00' },
-        { img: 'newin/nt7.avif', name: 'Pink Striped Bell Sleeves Crop Top', price: 'Rs. 1,499.00' },
-        { img: 'newin/nt8.avif', name: '>Womens Black Tie-Up Waist Crop Top', price: 'Rs. 699.00' },
-        { img: 'newin/nt9.avif', name: 'White Twist Detail Collar Neck top', price: 'Rs. 1,899.00' },
-        { img: 'newin/nt10.avif', name: 'Multi-Color Floral Print off-Shoulder Bardot Top', price: 'Rs. 1,899.00' },
-        { img: 'newin/nt11.avif', name: 'Pink Geometric Printed Crop Top', price: 'Rs. 1,899.00' },
-        { img: 'newin/nt12.avif', name: 'Pink Geometric Printed Crop Top', price: 'Rs. 699.00' }
+        { img: 'nt1.jpg', name: 'Brown-peach colored floral Gorgette crop top', price: 'Rs. 799' },
+        { img: 'nt2.jpg', name: 'Knitted white crop top', price: 'Rs. 1,299' },
+        { img: 'nt3.avif', name: 'Black Polyster crop top', price: 'Rs. 1,299.00' },
+        { img: 'nt4.avif', name: 'Short ruffle sleeved red crop top', price: 'Rs. 799.00' },
+        { img: 'nt5.avif', name: 'Long sleeved off-shoulder floral top', price: 'Rs. 799.00' },
+        { img: 'nt6.avif', name: 'Long sleeved black top', price: 'Rs. 999.00' },
+        { img: 'nt7.avif', name: 'Pink Striped Bell Sleeves Crop Top', price: 'Rs. 1,499.00' },
+        { img: 'nt8.avif', name: '>Womens Black Tie-Up Waist Crop Top', price: 'Rs. 699.00' },
+        { img: 'nt9.avif', name: 'White Twist Detail Collar Neck top', price: 'Rs. 1,899.00' },
+        { img: 'nt10.avif', name: 'Multi-Color Floral Print off-Shoulder Bardot Top', price: 'Rs. 1,899.00' },
+        { img: 'nt11.avif', name: 'Pink Geometric Printed Crop Top', price: 'Rs. 1,899.00' },
+        { img: 'nt12.avif', name: 'Pink Geometric Printed Crop Top', price: 'Rs. 699.00' }
     ];
 
     const productGrid = document.getElementById('productGrid');
