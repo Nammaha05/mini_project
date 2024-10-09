@@ -61,6 +61,19 @@ const shirts = [
                 { img: 'ss12.jpg', name: 'Black Printed Shirt', price: 'Rs.3,000' }
 ];
 
+ // (Shirts data)
+const suitsets = [
+    { img: 'sss1.jpeg', name: '', price: 'Rs.' },
+                { img: 'sss2.avif', name: '', price: 'Rs.3,000' },
+                { img: 'sss3.webp', name: '', price: 'Rs.1,490' },
+                { img: 'sss4.avif', name: 'Light Blue Denim Shirt', price: 'Rs.3,500' },
+                { img: 'sss5.avif', name: 'Dark Blue Denim Shirt', price: 'Rs.3,290' },
+                { img: 'sss6.webp', name: 'Light Green Plain Shirt', price: 'Rs.2,600' },
+                { img: 'sss7.jpg', name: 'Dark Blue Printed Shirt', price: 'Rs.2,999' },
+                { img: 'sss8.jpg', name: 'Multicolour Shirt', price: 'Rs.3,700' },
+                { img: 'sss9.avif', name: 'Pink Plain Shirt', price: 'Rs.1,300' },
+];
+
 // Function to display products
 function displayProducts(products) {
     const productGrid = document.getElementById('productGrid');
@@ -95,5 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
         displayProducts(tshirts);
     } else if (path.includes('shirts.html')) {
         displayProducts(shirts);
+    } else if (path.includes('suitsets.html')) {
+        displayProducts(suitsets);
     }
 });
