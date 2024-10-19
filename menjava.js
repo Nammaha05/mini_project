@@ -225,3 +225,39 @@ function closeConfirmation() {
 
 // Initial display of cart items
 displayCartItems();
+
+const cart = [];
+const totalPriceElement = document.getElementById('total-price');
+
+document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', () => {
+        const productElement = button.parentElement;
+        const productId = productElement.getAttribute('data-id');
+        const productName = productElement.querySelector('h2').innerText;
+        const productPrice = parseFloat(productElement.querySelector('p').innerText.replace('Price: $', ''));
+
+        addToCart(productId, productName, productPrice);
+    });
+});
+
+function addToCart(id, name, price) {
+    const product = { id, name, price };
+    cart.push(product);
+    updateCartDisplay();
+}
+
+function updateCartDisplay() {
+    const cartElement = document.getElementById('cart');
+    cartElement.innerHTML = '';
+
+    let total = 0;
+    cart.forEach(product => {
+        const li = document.createElement('li');
+        li.textContent = `${product.name} - $${product.price}`;
+        cartElement.appendChild(li);
+        total += product.price;
+    });
+
+    totalPriceElement.textContent = `Total: $${total.toFixed(2)}`;
+}
+
