@@ -158,27 +158,50 @@ function showImage() {
     }
 }
 
-// Initialize cart as an empty array
-let cart = [];
+// Initialize cart
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-// Function to add product to the cart
+// Function to add a product to the cart
 function addToCart() {
-    const productName = document.getElementById('product-name').innerText;
-    const productPrice = parseFloat(document.getElementById('product-price').innerText.replace(' Rs. ', ''));
-    const size = document.getElementById('size').value;
-    const productImage = document.querySelector('.image').src; // Use the main image of the product
+    const productName = document.querySelector('.product-info h1').innerText; // Get the product name
+    const productPrice = parseFloat(document.querySelector('.price-discounted').innerText.replace('Rs.', '').replace(',', '')); // Get the product price
+    const size = document.getElementById('size').value; // Get selected size
+    const productImage = document.querySelector('.product-image img').src; // Get the current image src
 
+    if (!size) {
+        alert('Please select a size.');
+        return;
+    }
+
+    // Check if product already exists in cart
     const existingProduct = cart.find(item => item.name === productName && item.size === size);
 
     if (existingProduct) {
         existingProduct.quantity += 1;
     } else {
+        // Add new product to the cart
         cart.push({ name: productName, price: productPrice, size: size, quantity: 1, image: productImage });
     }
 
+    // Update localStorage with the new cart
     localStorage.setItem('cart', JSON.stringify(cart));
+
     alert(`${productName} (Size: ${size}) has been added to your cart.`);
 }
+
+// Function to go to the checkout page
+function openCheckout() {
+    if (cart.length === 0) {
+        alert('Your cart is empty. Add items before proceeding to checkout.');
+    } else {
+        window.location.href = 'cart1.html'; // Redirect to cart page
+    }
+}
+
+// Add event listeners to buttons
+document.querySelector('#addToCartButton').addEventListener('click', addToCart);
+document.querySelector('#goToCartButton').addEventListener('click', openCheckout);
+
 
 // Function to navigate to the cart page
 function openCheckout() {
