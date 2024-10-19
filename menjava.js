@@ -158,12 +158,15 @@ function showImage() {
     }
 }
 
+// Initialize cart as an empty array
+let cart = [];
 
+// Function to add product to the cart
 function addToCart() {
     const productName = document.getElementById('product-name').innerText;
-    const productPrice = parseFloat(document.getElementById('product-price').innerText.replace(' USD', ''));
+    const productPrice = parseFloat(document.getElementById('product-price').innerText.replace(' Rs. ', ''));
     const size = document.getElementById('size').value;
-    const productImage = images[currentIndex]; // Get the currently displayed image
+    const productImage = document.querySelector('.image').src; // Use the main image of the product
 
     const existingProduct = cart.find(item => item.name === productName && item.size === size);
 
@@ -174,9 +177,10 @@ function addToCart() {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
-    alert('${productName} (Size: ${size}) has been added to your cart.');
+    alert(`${productName} (Size: ${size}) has been added to your cart.`);
 }
 
+// Function to navigate to the cart page
 function openCheckout() {
     if (cart.length === 0) {
         alert('Your cart is empty. Add items before proceeding to checkout.');
