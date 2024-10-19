@@ -134,41 +134,47 @@ window.onclick = function (event) {
     }
 }
 
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-function displayCartItems() {
-    const cartItemsDiv = document.getElementById('cart-items');
-    cartItemsDiv.innerHTML = '';
-    let totalCost = 0;
-
-    if (cart.length === 0) {
-        cartItemsDiv.innerHTML = '<p>Your cart is empty.</p>';
-        document.getElementById('total-cost').innerText = 'Total: 0.00 USD';
-        return;
-    }
-
-    cart.forEach((item, index) => {
-        const itemTotal = item.price * item.quantity;
-        totalCost += itemTotal;
-
-        const itemDiv = document.createElement('div');
-        itemDiv.innerHTML = `
-            <div class="cart-item">
-                <span>${item.name} - ${item.size} - ${item.price.toFixed(2)} USD (Quantity: ${item.quantity})</span>
-                <span>Total: ${itemTotal.toFixed(2)} USD</span>
-                <button onclick="removeFromCart(${index})">Remove</button>
-            </div>
-        `;
-        cartItemsDiv.appendChild(itemDiv);
-    });
-
-    document.getElementById('total-cost').innerText = `Total: ${totalCost.toFixed(2)} USD`;
+function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage();
 }
 
-function removeFromCart(index) {
-    cart.splice(index, 1);
+function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage();
+}
+
+function showImage() {
+    const image1 = document.getElementById('slideshow-image');
+    const image2 = document.getElementById('slideshow-image-2');
+
+    if (currentIndex === 0) {
+        image1.style.display = 'block';
+        image2.style.display = 'none';
+    } else {
+        image1.style.display = 'none';
+        image2.style.display = 'block';
+    }
+}
+
+
+function addToCart() {
+    const productName = document.getElementById('product-name').innerText;
+    const productPrice = parseFloat(document.getElementById('product-price').innerText.replace(' USD', ''));
+    const size = document.getElementById('size').value;
+    const productImage = images[currentIndex]; // Get the currently displayed image
+
+    const existingProduct = cart.find(item => item.name === productName && item.size === size);
+
+    if (existingProduct) {
+        existingProduct.quantity += 1;
+    } else {
+        cart.push({ name: productName, price: productPrice, size: size, quantity: 1, image: productImage });
+    }
+
     localStorage.setItem('cart', JSON.stringify(cart));
-    displayCartItems();
+    alert('${productName} (Size: ${size}) has been added to your cart.');
 }
 
 function openCheckout() {
@@ -176,88 +182,42 @@ function openCheckout() {
         alert('Your cart is empty. Add items before proceeding to checkout.');
         return;
     }
-    document.getElementById('checkout-modal').classList.remove('hidden');
+    location.href = 'cart1.html';
 }
 
-function closeCheckout() {
-    document.getElementById('checkout-modal').classList.add('hidden');
-    clearCheckoutForm();
+function shopNow() {
+    document.getElementById('payment-modal').classList.remove('hidden');
 }
 
-function clearCheckoutForm() {
-    document.getElementById('checkout-form').reset();
-}
-
-function submitCheckout() {
-    const name = document.getElementById('name').value;
+function confirmOrder() {
     const address = document.getElementById('address').value;
     const city = document.getElementById('city').value;
     const state = document.getElementById('state').value;
     const zip = document.getElementById('zip').value;
-    const paymentMethod = document.querySelector('input[name="payment-method"]:checked');
+    const paymentMethod = document.getElementById('payment-method').value;
 
-    if (!paymentMethod) {
-        alert('Please select a payment method.');
+    if (!address || !city || !state || !zip) {
+        alert('Please fill in all address fields.');
         return;
     }
 
-    const paymentMethodValue = paymentMethod.value;
-
-    if (!name || !address || !city || !state || !zip) {
-        alert('Please fill in all the details.');
-        return;
-    }
-
-    const confirmationMessage = `Thank you, ${name}! Your order for ${cart.length} item(s) will be shipped to ${address}, ${city}, ${state} - ${zip} via ${paymentMethodValue}.`;
+    // Show confirmation message
+    const confirmationMessage = `Thank you for your order! ${cart.length} item(s) will be shipped to ${address}, ${city}, ${state} - ${zip}. Payment method: ${paymentMethod}.`;
     document.getElementById('confirmation-message').innerText = confirmationMessage;
-    
-    closeCheckout();
-    document.getElementById('confirmation-modal').classList.remove('hidden');
 
+    // Clear the cart
     localStorage.removeItem('cart');
     cart = [];
-    displayCartItems();
+    closePaymentModal();
+    document.getElementById('confirmation-modal').classList.remove('hidden');
+}
+
+function closePaymentModal() {
+    document.getElementById('payment-modal').classList.add('hidden');
 }
 
 function closeConfirmation() {
     document.getElementById('confirmation-modal').classList.add('hidden');
 }
-
-// Initial display of cart items
-displayCartItems();
-
-const cart = [];
-const totalPriceElement = document.getElementById('total-price');
-
-document.querySelectorAll('.add-to-cart').forEach(button => {
-    button.addEventListener('click', () => {
-        const productElement = button.parentElement;
-        const productId = productElement.getAttribute('data-id');
-        const productName = productElement.querySelector('h2').innerText;
-        const productPrice = parseFloat(productElement.querySelector('p').innerText.replace('Price: $', ''));
-
-        addToCart(productId, productName, productPrice);
-    });
-});
-
-function addToCart(id, name, price) {
-    const product = { id, name, price };
-    cart.push(product);
-    updateCartDisplay();
-}
-
-function updateCartDisplay() {
-    const cartElement = document.getElementById('cart');
-    cartElement.innerHTML = '';
-
-    let total = 0;
-    cart.forEach(product => {
-        const li = document.createElement('li');
-        li.textContent = `${product.name} - $${product.price}`;
-        cartElement.appendChild(li);
-        total += product.price;
-    });
-
-    totalPriceElement.textContent = `Total: $${total.toFixed(2)}`;
-}
-
+   
+  
