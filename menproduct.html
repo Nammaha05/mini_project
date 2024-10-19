@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Details</title>
     <link rel="stylesheet" href="productstyle.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -23,20 +25,48 @@
 
     <section class="product-details">
         <div class="product-image">
-            <img id="productImage" src="" alt="Product Image">
+            <img id="productImage" src="product-image.jpg" alt="Product Image">
         </div>
         <div class="product-info">
-            <h3 id="productName"></h3>
-            <p id="productPrice" class="price"></p>
-            <p id="productDescription" class="description"></p>
-            <button class="buy-now-btn">Add to Cart</button>
+            <h1 id="productName">Dark Olive Signature Heavyweight Faded T-Shirt</h1>
+            <div class="price-section">
+                <p class="price-original">Rs. 1,199.00</p>
+                <p class="price-discounted">Rs. 899.00 <span class="save-percentage">(Save 25%)</span></p>
+            </div>
+            <div class="size-selection">
+                <label for="size">Size:</label>
+                <div id="sizeOptions">
+                    <button class="size-btn">XS</button>
+                    <button class="size-btn">S</button>
+                    <button class="size-btn">M</button>
+                    <button class="size-btn">L</button>
+                    <button class="size-btn" disabled>XL</button>
+                    <button class="size-btn" disabled>XXL</button>
+                </div>
+            </div>
+            <div class="quantity-selection">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" value="1" min="1" max="10">
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="buy-now-btn">Buy It Now</button>
         </div>
+    </section>
+
+    <section class="product-description">
+        <h3>Description</h3>
+        <ul>
+            <li>Composition: 100% Cotton</li>
+            <li>GSM: 230</li>
+            <li>Color: Olive</li>
+        </ul>
     </section>
 
     <footer>
         <p>&copy; 2024 Offbeat Outlet. All Rights Reserved.</p>
     </footer>
 
-    <script src="product.js"></script> <!-- Link to the JavaScript file -->
+    <script src="product.js"></script>
 </body>
+
 </html>
