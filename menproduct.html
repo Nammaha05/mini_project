@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details</title>
-    <link rel="stylesheet" href="menproduct.css">
+    <title>Dark Olive Signature Heavyweight Faded T-Shirt</title>
+    <link rel="stylesheet" href="productstyle.css">
 </head>
-
 <body>
     <header>
         <nav>
@@ -17,30 +15,21 @@
                 <li><a href="kurtas.html">Kurtas</a></li>
                 <li><a href="t-shirts.html">T-Shirts</a></li>
                 <li><a href="shirts.html">Shirts</a></li>
-                <li><a href="suitsets.html">Suitsets</a></li>
-                <li><a href="cart1.html">Cart</a></li>
+                <li><a href="jackets.html">Outerwear</a></li>
+                <li><a href="cart.html">Cart</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="product-details">
-        <div class="product-gallery">
-            <!-- Thumbnails of multiple images -->
-            <div class="thumbnail-images">
-                <img src="image1.jpg" alt="Thumbnail 1" onclick="changeProduct('image1.jpg', 'Dark Olive Signature Heavyweight Faded T-Shirt', 'Rs. 1,199.00', 'Rs. 899.00', 'description1')">
-                <img src="image2.jpg" alt="Thumbnail 2" onclick="changeProduct('image2.jpg', 'Navy Blue Slim Fit Casual T-Shirt', 'Rs. 1,299.00', 'Rs. 999.00', 'description2')">
-                <img src="image3.jpg" alt="Thumbnail 3" onclick="changeProduct('image3.jpg', 'Black Athletic Fit Workout T-Shirt', 'Rs. 1,499.00', 'Rs. 1,199.00', 'description3')">
-            </div>
-            <div class="product-image">
-                <img id="productImage" src="image1.jpg" alt="Product Image">
-            </div>
+        <div class="product-image">
+            <img src="image1.jpg" alt="Dark Olive Signature Heavyweight Faded T-Shirt">
         </div>
-
         <div class="product-info">
-            <h1 id="productName">Dark Olive Signature Heavyweight Faded T-Shirt</h1>
+            <h1>Dark Olive Signature Heavyweight Faded T-Shirt</h1>
             <div class="price-section">
-                <p class="price-original" id="priceOriginal">Rs. 1,199.00</p>
-                <p class="price-discounted" id="priceDiscounted">Rs. 899.00 <span class="save-percentage">(Save 25%)</span></p>
+                <p class="price-original">Rs. 1,199.00</p>
+                <p class="price-discounted">Rs. 899.00 <span class="save-percentage">(Save 25%)</span></p>
             </div>
             <div class="size-selection">
                 <label for="size">Size:</label>
@@ -65,30 +54,12 @@
 
     <section class="product-description">
         <h3>Description</h3>
-        <div id="description1" class="description-content">
-            <ul>
-                <li>Composition: 100% Cotton</li>
-                <li>GSM: 230</li>
-                <li>Color: Olive</li>
-                <li>Style: Heavyweight faded T-shirt</li>
-            </ul>
-        </div>
-        <div id="description2" class="description-content" style="display: none;">
-            <ul>
-                <li>Composition: 100% Cotton</li>
-                <li>GSM: 250</li>
-                <li>Color: Navy Blue</li>
-                <li>Style: Slim fit casual T-shirt</li>
-            </ul>
-        </div>
-        <div id="description3" class="description-content" style="display: none;">
-            <ul>
-                <li>Composition: 90% Cotton, 10% Polyester</li>
-                <li>GSM: 220</li>
-                <li>Color: Black</li>
-                <li>Style: Athletic fit workout T-shirt</li>
-            </ul>
-        </div>
+        <ul>
+            <li>Composition: 100% Cotton</li>
+            <li>GSM: 230</li>
+            <li>Color: Olive</li>
+            <li>Style: Heavyweight faded T-shirt</li>
+        </ul>
     </section>
 
     <!-- Size Chart Modal -->
@@ -144,7 +115,6 @@
         <p>&copy; 2024 Offbeat Outlet. All Rights Reserved.</p>
     </footer>
 
-    <script src="menjava.js"></script>
+    <script src="product.js"></script>
 </body>
-
 </html>
