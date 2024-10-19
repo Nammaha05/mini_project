@@ -93,6 +93,10 @@ h1 {
     font-size: 28px;
 }
 
+h2{
+    font-size: 24px;
+}
+
 .price-section {
     display: flex;
     align-items: baseline;
