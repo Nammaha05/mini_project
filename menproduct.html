@@ -116,6 +116,35 @@
         <p>&copy; 2024 Offbeat Outlet. All Rights Reserved.</p>
     </footer>
 
+     <!-- Payment Modal -->
+    <div id="payment-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Enter Your Address</h2>
+            <input type="text" id="address" placeholder="Your Address" required>
+            <input type="text" id="city" placeholder="City" required>
+            <input type="text" id="state" placeholder="State" required>
+            <input type="text" id="zip" placeholder="ZIP Code" required>
+            <h3>Select Payment Method:</h3>
+            <select id="payment-method">
+                <option value="Credit Card">Credit Card</option>
+                <option value="PayPal">PayPal</option>
+                <option value="Bank Transfer">Bank Transfer</option>
+                <option value="Cash on Delivery">Cash on Delivery</option> <!-- Added Cash on Delivery option -->
+            </select>
+            <button onclick="confirmOrder()">Confirm Order</button>
+            <button onclick="closePaymentModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmation-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Order Confirmed!</h2>
+            <p id="confirmation-message"></p>
+            <button onclick="closeConfirmation()">Close</button>
+        </div>
+    </div>
+    
     <script src="menjava.js"></script>
 </body>
 </html>
