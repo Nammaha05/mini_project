@@ -19,6 +19,16 @@
                 <li><a href="cart1.html">Cart</a></li>
             </ul>
         </nav>
+        <li> 
+              <a class="nav_links" href="cart1.html">CART </a>
+          </li> 
+          </ul>  <p id="selectedItem"></p>
+         </span>  <script>
+          function displaySelected(category, item) {
+              const display = document.getElementById("selectedItem");
+              display.textContent = `You selected: ${item} from ${category}`;
+          }
+      </script>
     </header>
 
     <section class="product-details">
@@ -34,12 +44,12 @@
             <div class="size-selection">
                 <label for="size">Size:</label>
                 <select id="size">
-                    <button class="size-btn">XS</button>
-                    <button class="size-btn">S</button>
-                    <button class="size-btn">M</button>
-                    <button class="size-btn">L</button>
-                    <button class="size-btn" disabled>XL</button>
-                    <button class="size-btn" disabled>XXL</button>
+                    <option class="size-btn">XS</option>
+                    <option class="size-btn">S</option>
+                    <option class="size-btn">M</option>
+                    <option class="size-btn">L</option>
+                    <option class="size-btn" disabled>XL</option>
+                    <option class="size-btn" disabled>XXL</option>
                 </select>
                     
                 </div>
@@ -49,20 +59,10 @@
                 <label for="quantity">Quantity:</label>
                 <input type="number" id="quantity" name="quantity" value="1" min="1" max="10">
             </div>
- <button onclick="addToCart()">Add to Cart</button>
+         <button onclick="addToCart()">Add to Cart</button>
         <button onclick="openCheckout()">Go to Cart</button>
         <button onclick="shopNow()">Shop Now</button>
         </div>
-    </section>
-
-    <section class="product-description">
-        <h3>Description</h3>
-        <ul>
-            <li>Composition: 100% Cotton</li>
-            <li>GSM: 230</li>
-            <li>Color: Olive</li>
-            <li>Style: Heavyweight faded T-shirt</li>
-        </ul>
     </section>
 
     <!-- Size Chart Modal -->
