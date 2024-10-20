@@ -1,91 +1,82 @@
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-function displayCartItems() {
-    const cartItemsDiv = document.getElementById('cart-items');
+// Load cart items from localStorage and display them
+function loadCart() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartItemsDiv = document.getElementById('cartItems');
     cartItemsDiv.innerHTML = '';
-    let totalCost = 0;
-
-    if (cart.length === 0) {
-        cartItemsDiv.innerHTML = '<p>Your cart is empty.</p>';
-        document.getElementById('total-cost').innerText = 'Total: 0.00 USD';
-        return;
-    }
+    let total = 0;
 
     cart.forEach((item, index) => {
-        const itemTotal = item.price * item.quantity;
-        totalCost += itemTotal;
-
-        const itemDiv = document.createElement('div');
-        itemDiv.innerHTML = `
-            <div class="cart-item">
-                <span>${item.name} - ${item.size} - ${item.price.toFixed(2)} USD (Quantity: ${item.quantity})</span>
-                <span>Total: ${itemTotal.toFixed(2)} USD</span>
-                <button onclick="removeFromCart(${index})">Remove</button>
+        const cartItem = document.createElement('div');
+        cartItem.classList.add('cart-item');
+        cartItem.innerHTML = `
+            <img src="${item.image}" alt="${item.name}">
+            <div class="cart-item-info">
+                <h3>${item.name}</h3>
+                <p>Price: Rs.${item.price}</p>
+                <div class="cart-item-controls">
+                    <input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${index}, this.value)">
+                    <button onclick="removeItem(${index})">Remove</button>
+                </div>
             </div>
         `;
-        cartItemsDiv.appendChild(itemDiv);
+        cartItemsDiv.appendChild(cartItem);
+        total += item.price * item.quantity;
     });
 
-    document.getElementById('total-cost').innerText = `Total: ${totalCost.toFixed(2)} USD`;
+    const tax = total * 0.05;
+    const grandTotal = total + tax;
+
+    document.getElementById('totalPrice').textContent = `Rs.${total.toFixed(2)}`;
+    document.getElementById('taxPrice').textContent = `Rs.${tax.toFixed(2)}`;
+    document.getElementById('grandTotal').textContent = `Rs.${grandTotal.toFixed(2)}`;
 }
 
-function removeFromCart(index) {
+// Function to update item quantity
+function updateQuantity(index, newQuantity) {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    if (newQuantity < 1) return;
+
+    cart[index].quantity = parseInt(newQuantity);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    loadCart();
+}
+
+// Function to remove an item from the cart
+function removeItem(index) {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
     cart.splice(index, 1);
     localStorage.setItem('cart', JSON.stringify(cart));
-    displayCartItems();
+    loadCart();
 }
 
-function openCheckout() {
-    if (cart.length === 0) {
-        alert('Your cart is empty. Add items before proceeding to checkout.');
-        return;
+// Checkout flow functions
+document.getElementById('checkoutButton').addEventListener('click', () => {
+    document.getElementById('addressPopup').classList.remove('hidden');
+});
+
+document.getElementById('nextPaymentButton').addEventListener('click', () => {
+    const address = document.getElementById('addressInput').value;
+    if (address.trim()) {
+        document.getElementById('addressPopup').classList.add('hidden');
+        document.getElementById('paymentPopup').classList.remove('hidden');
+    } else {
+        alert('Please enter a valid address.');
     }
-    document.getElementById('checkout-modal').classList.remove('hidden');
-}
+});
 
-function closeCheckout() {
-    document.getElementById('checkout-modal').classList.add('hidden');
-    clearCheckoutForm();
-}
-
-function clearCheckoutForm() {
-    document.getElementById('checkout-form').reset();
-}
-
-function submitCheckout() {
-    const name = document.getElementById('name').value;
-    const address = document.getElementById('address').value;
-    const city = document.getElementById('city').value;
-    const state = document.getElementById('state').value;
-    const zip = document.getElementById('zip').value;
-    const paymentMethod = document.querySelector('input[name="payment-method"]:checked');
-
-    if (!paymentMethod) {
+document.getElementById('confirmOrderButton').addEventListener('click', () => {
+    const paymentMethod = document.getElementById('paymentMethod').value;
+    if (paymentMethod) {
+        document.getElementById('paymentPopup').classList.add('hidden');
+        document.getElementById('confirmationPopup').classList.remove('hidden');
+        localStorage.removeItem('cart'); // Clear cart after order confirmation
+    } else {
         alert('Please select a payment method.');
-        return;
     }
+});
 
-    const paymentMethodValue = paymentMethod.value;
-
-    if (!name || !address || !city || !state || !zip) {
-        alert('Please fill in all the details.');
-        return;
-    }
-
-    const confirmationMessage = `Thank you, ${name}! Your order for ${cart.length} item(s) will be shipped to ${address}, ${city}, ${state} - ${zip} via ${paymentMethodValue}.`;
-    document.getElementById('confirmation-message').innerText = confirmationMessage;
-    
-    closeCheckout();
-    document.getElementById('confirmation-modal').classList.remove('hidden');
-
-    localStorage.removeItem('cart');
-    cart = [];
-    displayCartItems();
+function closePopup(popupId) {
+    document.getElementById(popupId).classList.add('hidden');
 }
 
-function closeConfirmation() {
-    document.getElementById('confirmation-modal').classList.add('hidden');
-}
-
-// Initial display of cart items
-displayCartItems();
+window.onload = loadCart;
