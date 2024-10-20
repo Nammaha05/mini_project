@@ -85,10 +85,15 @@ function displayProducts(products) {
             <h3>${product.name}</h3>
             <p>${product.price}</p>
         `;
-        productItem.onclick = () => viewProduct(product.img, product.name, product.price);
-        productGrid.appendChild(productItem);
+
+
+    productItem.addEventListener('click',() => {
+    viewproduct(product.img, product.name, product.price);
+});
+            productGrid.appendChild(productItem);
     });
 }
+
 
 // Function to view detailed product
 function viewProduct(image, name, price, description) {
