@@ -30,19 +30,18 @@
       </script>
     </header>
 
-    <section class="product-details">
+
+<section class="product-details">
         <div class="product-image">
-            <img src="mm1.jpeg" alt="Dark Heavyweight Faded T-Shirt" class="image">
+            <img id="productImage" src="" alt="Product Image">
         </div>
         <div class="product-info">
-            <h1>Dark Olive Signature Heavyweight Faded T-Shirt</h1>
-            <h2> <p>This is a description or content that goes alongside the image. You can add more text or any other elements here.</p>
-              </h2>
-            <div class="price-section">
-                <p class="price-original">Rs. 1,199.00</p>
-                <p class="price-discounted">Rs. 899.00 <span class="save-percentage">(Save 25%)</span></p>
-            </div>
-            <div class="size-selection">
+            <h3 id="productName"></h3>
+            <p id="productPrice" class="price"></p>
+            <p id="productDescription" class="description"></p>
+            <button class="buy-now-btn">Add to Cart</button>
+        </div>
+     <div class="size-selection">
                 <label for="size">Size:</label>
                 <select id="size">
                     <option class="size-btn">XS</option>
@@ -60,16 +59,8 @@
                 <input type="number" id="quantity" name="quantity" value="1" min="1" max="10">
             </div>
 
-   
-        <button onclick="addToCart()">Add to Cart</button>
-        <button onclick="openCheckout()">Go to Cart</button>
-        <button onclick="shopNow()">Shop Now</button>
-     </div>
-            
     </section>
 
-<button id="addToCartButton">Add to Cart</button>
-<button id="goToCartButton">Go to Cart</button>
     
     <!-- Size Chart Modal -->
     <div id="sizeChartModal" class="modal">
