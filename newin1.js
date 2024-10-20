@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const products = [
-        { img: nc1.jpg', name: 'High waist Straight fit Wide leg Cargo jeans', price: 800 },
+        { img: 'nc1.jpg', name: 'High waist Straight fit Wide leg Cargo jeans', price: 800 },
         { img: 'nk1.avif', name: 'Peach Colored Chikankaari Short Kurti', price: 900 },
         { img: 'nk2.avif', name: 'Shaded Blue embroidered Kurti', price: 900 },
         { img: 'nc2.jpg', name: 'High waist Straight fit Cargo jeans', price: 900 },
