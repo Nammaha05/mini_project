@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration</title>
+    <link rel="stylesheet" href="login&registration.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h1 id="form-title">Login</h1>
+        <form id="auth-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit" id="submit-button">Login</button>
+        </form>
+        <p id="message" class="hidden"></p>
+        <p>Don't have an account? <br>  
+            <a href="#" id="toggle-form">Register here</a>
+        </p>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>
