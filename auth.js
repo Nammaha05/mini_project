@@ -30,7 +30,7 @@ function login(username, password) {
         localStorage.setItem('loggedIn', 'true');
 
         setTimeout(() => {
-            window.location.href = 'index.html'; // Redirect to the home page after successful login
+            window.location.href = 'login&registration.html'; // Redirect to the home page after successful login
         }, 2000);
     } else {
         messageElement.classList.remove('hidden');
