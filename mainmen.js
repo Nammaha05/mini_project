@@ -85,21 +85,16 @@ function displayProducts(products) {
             <h3>${product.name}</h3>
             <p>${product.price}</p>
         `;
-
-
-    productItem.addEventListener('click',() => {
-    viewproduct(product.img, product.name, product.price);
-});
-            productGrid.appendChild(productItem);
+        productItem.onclick = () => viewProduct(product.img, product.name, product.price);
+        productGrid.appendChild(productItem);
     });
 }
-
 
 // Function to view detailed product
 function viewProduct(image, name, price, description) {
     const product = { image, name, price, description };
     localStorage.setItem('selectedProduct', JSON.stringify(product));
-    window.location.href = 'menproduct.html';
+    window.location.href = 'product.html';
 }
 
 // Check which page is being loaded
