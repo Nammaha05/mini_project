@@ -1,17 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
     const products = [
-        { img: nc1.jpg', name: 'High waist Straight fit Wide leg Cargo jeans', price: 'Rs. 799' },
-        { img: 'nk1.avif', name: 'Peach Colored Chikankaari Short Kurti', price: 'Rs. 1,299' },
-        { img: 'nk2.avif', name: 'Shaded Blue embroidered Kurti', price: 'Rs. 1,299.00' },
-        { img: 'nc2.jpg', name: 'High waist Straight fit Cargo jeans', price: 'Rs. 799.00' },
-        { img: 'no1.avif', name: 'Red Printed Oversized T-shirt', price: 'Rs. 799.00' },
-        { img: 'nt1.jpg', name: 'Brown-peach colored floral Gorgette crop top', price: 'Rs. 999.00' },
-        { img: 'no2.avif', name: 'Pink Calligraphed Oversized T-shirt', price: 'Rs. 1,499.00' },
-        { img: 'nk3.avif', name: 'Red Embroidered Kurti', price: 'Rs. 699.00' },
-        { img: 'nc3.jpg', name: 'High waist Straight fit Cargo jeans', price: 'Rs. 1,899.00' },
-        { img: 'no3.avif', name: 'Light brown Printed Oversized T-shirt', price: 'Rs. 1,899.00' },
-        { img: 'nt2.jpg', name: 'Knitted white crop top', price: 'Rs. 1,899.00' },
-        { img: 'nt3.avif', name: 'Black Polyster crop top', price: 'Rs. 699.00' }
+        { img: nc1.jpg', name: 'High waist Straight fit Wide leg Cargo jeans', price: 800 },
+        { img: 'nk1.avif', name: 'Peach Colored Chikankaari Short Kurti', price: 900 },
+        { img: 'nk2.avif', name: 'Shaded Blue embroidered Kurti', price: 900 },
+        { img: 'nc2.jpg', name: 'High waist Straight fit Cargo jeans', price: 900 },
+        { img: 'no1.avif', name: 'Red Printed Oversized T-shirt', price: 'Rs. 900 },
+        { img: 'nt1.jpg', name: 'Brown-peach colored floral Gorgette crop top', price: 900 },
+        { img: 'no2.avif', name: 'Pink Calligraphed Oversized T-shirt', price: 900 },
+        { img: 'nk3.avif', name: 'Red Embroidered Kurti', price: 900 },
+        { img: 'nc3.jpg', name: 'High waist Straight fit Cargo jeans', price: 900 },
+        { img: 'no3.avif', name: 'Light brown Printed Oversized T-shirt', price: 900 },
+        { img: 'nt2.jpg', name: 'Knitted white crop top', price: 900},
+        { img: 'nt3.avif', name: 'Black Polyster crop top', price: 900 }
     ];
 
     const productGrid = document.getElementById('productGrid');
