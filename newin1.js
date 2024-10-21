@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { img: 'nk1.avif', name: 'Peach Colored Chikankaari Short Kurti', price: 900 },
         { img: 'nk2.avif', name: 'Shaded Blue embroidered Kurti', price: 900 },
         { img: 'nc2.jpg', name: 'High waist Straight fit Cargo jeans', price: 900 },
-        { img: 'no1.avif', name: 'Red Printed Oversized T-shirt', price: 'Rs. 900 },
+        { img: 'no1.avif', name: 'Red Printed Oversized T-shirt', price: 900 },
         { img: 'nt1.jpg', name: 'Brown-peach colored floral Gorgette crop top', price: 900 },
         { img: 'no2.avif', name: 'Pink Calligraphed Oversized T-shirt', price: 900 },
         { img: 'nk3.avif', name: 'Red Embroidered Kurti', price: 900 },
