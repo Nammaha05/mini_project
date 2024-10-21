@@ -40,6 +40,7 @@
           color: #f7d1ba;
       }
 
+     
       .logo {
           font-size: 1.8rem;
           font-weight: bold;
@@ -51,13 +52,15 @@
           display: none;
           position: absolute; /* Positioned below the dropdown item */
           top: 100%; /* Align it below the dropdown link */
-          left: 0;
+          left: 38%;
+          transform: translateX(-50%); /* Shift it back to the left by half its width */
           background-color: #e0e0e0; /* Background color of the dropdown */
           list-style: none;
-          padding: 10px 0;
+          padding: 5px ;
           margin: 0;
           border-radius: 5px;
           z-index: 1; /* Ensure it appears above other elements */
+          
       }
 
       .dropdown-menu li {
@@ -73,7 +76,6 @@
       .dropdown:hover .dropdown-menu {
           display: block; /* Show dropdown on hover */
       }
-
       /* Hero Section */
       /* Hero Section */
       .hero-section {

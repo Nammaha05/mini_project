@@ -3,47 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Olive Signature Heavyweight Faded T-Shirt</title>
+    <title>Product details</title>
     <link rel="stylesheet" href="menproduct.css">
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">Offbeat Outlet</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="kurtas.html">Kurtas</a></li>
-                <li><a href="t-shirts.html">T-Shirts</a></li>
-                <li><a href="shirts.html">Shirts</a></li>
-                <li><a href="jackets.html">Outerwear</a></li>
-                <li><a href="cart1.html">Cart</a></li>
+          <nav id="navbar">
+            <ul id="navcontent">
+                <div id="name">
+                   OFFBEAT OUTLET
+                </div> 
+                <li><a class="nav_links" href="index.html">HOME</a></li>
+                <li class="dropdown">
+                    <a href="newin1.html" class="nav_links">NEW IN</a>
+                    <ul class="dropdown-content">
+                        <li><a href="newinCroptop.html">Crop tops</a></li>
+                        <li><a href="newinKurti.html">Women short kurtis</a></li>
+                        <li><a href="newinOversized.html">Oversized t-shirts</a></li>
+                        <li><a href="newinCargo.html">Latest Cargo jeans</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="nav_links">WOMEN</a>
+                    <ul class="dropdown-content">
+                        <li><a href="dresses.html">Dresses</a></li>
+                        <li><a href="tops.html">Tops</a></li>
+                        <li><a href="bottoms.html">Bottoms</a></li>
+                        <li><a href="jackets.html">Jackets</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="nav_links">MEN</a>
+                    <ul class="dropdown-content">
+                        <li><a href="t-shirts.html">T-shirts</a></li>
+                        <li><a href="shirts.html">Shirts</a></li>
+                        <li><a href="shoes.html">Shoes</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="nav_links">KIDS</a>
+                    <ul class="dropdown-content">
+                        <li><a href="kidsTops&Tshirts.html">T-shirts & tops</a></li>
+                        <li><a href="kiddresses.html">Dresses</a></li>
+                        <li><a href="kidsbottoms.html">Bottoms</a></li>
+                        <li><a href="kidsshoes.html">Shoes</a></li>
+                    </ul>
+                </li>
+                <li><a class="nav_links" href="cart1.html">CART</a></li>
+                <li><a class="nav_links" href="logout.html">LOGOUT</a></li>
             </ul>
         </nav>
-        <li> 
-              <a class="nav_links" href="cart1.html">CART </a>
-          </li> 
-          </ul>  <p id="selectedItem"></p>
-         </span>  <script>
-          function displaySelected(category, item) {
-              const display = document.getElementById("selectedItem");
-              display.textContent = `You selected: ${item} from ${category}`;
-          }
-      </script>
+
     </header>
 
-    <section class="product-details">
+
+<section class="product-details">
         <div class="product-image">
-            <img src="mm1.jpeg" alt="Dark Heavyweight Faded T-Shirt" class="image">
+            <img id="productImage" src="" alt="Product Image">
         </div>
         <div class="product-info">
-            <h1>Dark Olive Signature Heavyweight Faded T-Shirt</h1>
-            <h2> <p>This is a description or content that goes alongside the image. You can add more text or any other elements here.</p>
-              </h2>
-            <div class="price-section">
-                <p class="price-original">Rs. 1,199.00</p>
-                <p class="price-discounted">Rs. 899.00 <span class="save-percentage">(Save 25%)</span></p>
-            </div>
-            <div class="size-selection">
+            <h3 id="productName"></h3>
+            <p id="productPrice" class="price"></p>
+            <p id="productDescription" class="description"></p>
+            <button id="sizeChartBtn" class="size-chart-btn">Size Chart</button>
+     <div class="size-selection">
                 <label for="size">Size:</label>
                 <select id="size">
                     <option class="size-btn">XS</option>
@@ -55,22 +78,15 @@
                 </select>
                     
                 </div>
-                <button id="sizeChartBtn" class="size-chart-btn">Size Chart</button>
               <div class="quantity-selection">
                 <label for="quantity">Quantity:</label>
                 <input type="number" id="quantity" name="quantity" value="1" min="1" max="10">
             </div>
+            <button class="buy-now-btn">Add to Cart</button>
 
-   
-        <button onclick="addToCart()">Add to Cart</button>
-        <button onclick="openCheckout()">Go to Cart</button>
-        <button onclick="shopNow()">Shop Now</button>
-     </div>
-            
+        </div>
+
     </section>
-
-<button id="addToCartButton">Add to Cart</button>
-<button id="goToCartButton">Go to Cart</button>
     
     <!-- Size Chart Modal -->
     <div id="sizeChartModal" class="modal">
